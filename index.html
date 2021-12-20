@@ -22,7 +22,7 @@
 			}
 			/* Чтобы тригонометрическая таблица влезла опытным путем уменьшим размер на 30%*/
 			#table {
-				font-size: 70%;
+				font-size: 40%;
 			}
 			/* Для невидимых элементов создадим скрывающий класс */
 			.hide {
@@ -92,17 +92,13 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Объект финансовой математики
-						----------------------------
+						#### Объект финансовой математики
 
-						Объектом изучения финансовой математики являются любые финансово-кредитные операции, 
-						которые предполагают наличие ряда условий, с которыми согласны участвующие стороны.
-
-				        К таким условиям относятся:
+						Объектом изучения являются любые финансово-кредитные операции. Они предполагают ряд условий:
 						- денежные суммы или платежи (разовые, в рассрочку, постоянные, переменные и т.д.);
 						- временные параметры (время может обозначать общий срок операций, интервалы 
 						поступления платежей или момент погашения задолженности);
-						- процентные ставки (фиксированные, переменные, номинальные, эффективные и т.д.).						
+						- процентные ставки.						
 
 						Note:						
 
@@ -111,12 +107,12 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Принципы финансовой математики
-						------------------------------
+						### Принципы финансовой математики
 
-						Первый (основной) принцип финансовой математики: одна и та же сумма денег в различные
-						моменты времени имеют различную стоимость.
-						Второй принцип финансовой математики: относительно определенных условий, разные суммы 
+						**Первый (основной) принцип** финансовой математики: одна и та же сумма денег в различные
+						моменты времени имеют различную стоимость.  
+
+						**Второй принцип** финансовой математики: относительно определенных условий, разные суммы 
 						денег в различные моменты времени могут быть равноценными в финансово-экономическом 
 						смысле.
 
@@ -127,16 +123,16 @@
 
 				<section data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						### Основные понятия
+						#### Основные понятия
 
-						Проценты (процентные деньги) – абсолютная величина дохода от предоставления денег 
+						**Проценты (процентные деньги)** – абсолютная величина дохода от предоставления денег 
 						в долг в любой его форме (выдача ссуды, продажа товара в кредит, помещение денег 
 						на депозитный счет и т.д.).
 
-						Процентная ставка – относительная величина дохода за фиксированный отрезок 
+						**Процентная ставка** – относительная величина дохода за фиксированный отрезок 
 						времени – отношение процентных денег к основной сумме долга.
 
-						Период начисления – временной интервал, к которому приурочена процентная ставка.
+						**Период начисления** – временной интервал, к которому приурочена процентная ставка.
 
 						Note:
 
@@ -145,12 +141,12 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Проценты
-						--------
+						### Проценты
 						
-						Любая операция, как наращения, так и дисконтирования, невозможна без применения процентной ставки и схемы начисления процентов.
+						Любая операция, как наращения, так и дисконтирования, невозможна без применения процентной 
+						ставки и схемы начисления процентов.
 						
-						Проценты:
+						Проценты бывают:
 						- простые (применяются для краткосрочных операций);
 						- сложные (применяются в долгосрочных операциях).
 
@@ -176,16 +172,13 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Обозначения
-						-----------
+						### Обозначения
 
-						$$
-						I - проценты за весь срок;
-						P - первоначальная сумма долга;
-						S - наращенная сумма, т. е. сумма в конце срока;
-						i - ставка простых процентов;
-						n - срок в годах.
-						$$
+						$I$ - проценты за весь срок;  
+						$P$ - первоначальная сумма долга;  
+						$S$ - наращенная сумма, т. е. сумма в конце срока;  
+						$i$ - ставка простых процентов;  
+						$n$ - срок в годах.
 
 
 						Note:
@@ -195,19 +188,25 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Формулы наращения по простой процентной ставке
-						----------------------------------------------
+						### Формулы наращения по простой процентной ставке
 						
 						Начисленные за весь срок проценты можно вычислить с помощью формулы:
 						$$ I = Pni; $$
 						
+						Note:
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						### Формулы наращения по простой процентной ставке
+						
 						Наращенная сумма представляет собой сумму первоначальной суммы и
 						наращенных процентов:
 						
-						$$
-						S = P + I = P + Pni = P(1+ni). 
-						S = P(1+ni). *(1.1)*
-						$$
+						$S = P + I = P + Pni = P(1+ni)$.  
+						$S = P(1+ni)$. *(1.1)*
 
 						Выражение *(1.1)* называют формулой простых процентов.					
 
@@ -220,17 +219,13 @@
 					<script type="text/template">
 						### Дисконтирование по простым процентным ставкам
 						
-						В финансовой практике часто сталкиваются с задачей, обратной наращению процентов: по заданной сумме $ S $, 
-						которую следует уплатить через некоторое время $ n $, необходимо определить сумму полученной ссуды $ Р $. 
-						Расчет $ Р $ по $ S $ необходим и тогда, когда проценты с суммы $ S $ удерживаются вперед, т.е. 
-						непосредственно при выдаче кредита, ссуды. В этих случаях говорят, что сумма $ S $ дисконтируется.
-						
 						***Дисконтирование*** – это процесс уменьшения суммы денег, относящейся к будущему, 
 						в связи с учетом процентов.
 
 						Процесс начисления процентов и их удержание называют ***учетом***. 
 						
-						Удержанные проценты, т.е. разность $ D = S - P $ - ***дисконтом (скидкой)***.
+						Удержанные проценты, т.е. разность  
+						$ D = S - P $ - ***дисконтом (скидкой)***.
 
 
 						Note:
@@ -240,15 +235,12 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Обозначения
-						-----------
+						### Обозначения
 
-						$$
-						P - современная стоимость (величина) будущего платежа;
-						S - будущий платеж;
-						n - срок до закрытия платежа в годах;
-						i - простая процентная ставка.
-						$$
+						$P$ - современная стоимость (величина) будущего платежа;  
+						$S$ - будущий платеж;  
+						$n$ - срок до закрытия платежа в годах;  
+						$i$ - простая процентная ставка.
 
 						Note:
 
@@ -257,20 +249,28 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Формулы дисконтирования по простой процентной ставке
-						----------------------------------------------------
+						#### Формулы дисконтирования по простой процентной ставке
 
-						В зависимости от вида процентной ставки применяют два метода дисконтирования: математическое 
-						дисконтирование и банковский (коммерческий) учет. 
+						В зависимости от вида процентной ставки применяют два метода дисконтирования: 
+						математическое дисконтирование и банковский (коммерческий) учет. 
 						
-						В первом случае применяется ставка наращения, во втором — учетная ставка. 
+						Note:
 
-						Математическое дисконтирование представляет собой нахождение первоначальной суммы по наращенной:
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### Формулы дисконтирования по простой процентной ставке
 						
-						$$
-						S = P(1+ni);
-						P = \tfrac{S}{1+ni}.
-						$$
+						При математическом дисконтировании применяется ставка наращения, при банковском 
+						учете — учетная ставка. 
+
+						**Математическое дисконтирование** представляет собой нахождение первоначальной суммы 
+						по наращенной:
+						
+						$S = P(1+ni)$;  
+						$P = \tfrac{S}{1+ni}$.
 
 						Note:
 
@@ -291,18 +291,15 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Обозначения
-						-----------
+						### Обозначения
 
 						Применяются те же обозначения, что и в формуле наращения по простым процентам:
 
-						$$
-						I - проценты за весь срок;
-						P - первоначальная сумма долга;
-						S - наращенная сумма, т. е. сумма в конце срока;
-						i - ставка сложных процентов;
-						n - срок в годах.
-						$$
+						$I$ - проценты за весь срок;  
+						$P$ - первоначальная сумма долга;  
+						$S$ - наращенная сумма, т. е. сумма в конце срока; 
+						$i$ - ставка сложных процентов;  
+						$n$ - срок в годах.
 
 						Note:
 
@@ -311,22 +308,26 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Формулы наращения по сложной процентной ставке
-						----------------------------------------------
+						#### Формулы наращения по сложной процентной ставке
 
-						$$
-						I_1 = Pi - капитализация процентов за 1 год;
-						S_1 = P + Pi = P(1+i) - наращенная сумма за 1 год.
+						$I_1 = Pi$ - капитализация процентов за 1 год;  
+						$S_1 = P + Pi = P(1+i)$ - наращенная сумма за 1 год.  
 
-						I_2 = (P + I_1)i = (P + Pi)i = P(1+i)i - капитализация процентов за 2 год;
-						S_2 = S_1 + I_2 = P(1+i) + P(1+i)i = P(1+i)^2 - наращенная сумма за 2 год.
-						$$
+						$I_2 = (P + I_1)i = (P + Pi)i = P(1+i)i$ - капитализация процентов за 2 год; 
+						$S_2 = S_1 + I_2 = P(1+i) + P(1+i)i = P(1+i)^2$ - наращенная сумма за 2 год.  
+					
+						Note:
 
-						В конце $ n $-го года: 
-						$$
-						I = S - P = P[(1+i)^n - 1] - капитализация процентов за $ n $ год;
-						S = P(1+i)^n - наращенная сумма за $ n $ год.
-						$$
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### Формулы наращения по сложной процентной ставке
+						
+						В конце $ n $-го года:  
+						$I = S - P = P[(1+i)^n - 1]$ - капитализация процентов за $ n $ год;  
+						$S = P(1+i)^n$ - наращенная сумма за $ n $ год.
 
 						Время при наращении по сложной ставке обычно измеряется как АСТ/АСТ.
 						
@@ -338,14 +339,10 @@
 
 				<section data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						### Дисконтирование по сложным процентным ставкам
+						#### Дисконтирование по сложным процентным ставкам
 
-						***Дисконтирование по сложной ставке процентов*** — процесс, обратный во времени процессу наращения по 
-						сложной ставке процентов. 
-						
-						Если при наращении изменение первоначальной суммы $ P $ происходит дискретно, скачками, в конце очередного 
-						периода начисления процентов, то процесс дисконтирования будущей суммы $ S $ также происходит скачкообразно,
-						в обратном направлении, со скачком в конце очередного периода дисконтирования. 
+						***Дисконтирование по сложной ставке процентов*** — процесс, обратный во времени 
+						процессу наращения по сложной ставке процентов.
 						
 						Note:
 
@@ -354,20 +351,12 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Обозначения
-						-----------
+						### Обозначения
 
-						$$
-						P - современная стоимость (величина) будущего платежа;
-						S - будущий платеж;
-						n - срок до закрытия платежа в годах;
-						d - сложная процентная (учеьная) ставка.
-						$$
-
-						В конце первого периода 
-						дисконтирования величина текущей стоимости суммы S равна S/(1+ iT), в конце второго периода - s/(1+iT )2 
-						и т. д. После п циклов 	дисконтирования текущая стоимость суммы S равна
-						
+						$P$ - современная стоимость (величина) будущего платежа;  
+						$S$ - будущий платеж;  
+						$n$ - срок до закрытия платежа в годах;  
+						$d$ - сложная процентная (учетная) ставка.
 
 						Note:
 
@@ -376,12 +365,11 @@
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Формулы наращения по сложной процентной ставке
-						----------------------------------------------
+						### Формулы наращения по сложной процентной ставке
 
-						В конце первого периода 
-						дисконтирования величина текущей стоимости суммы S равна S/(1+ iT), в конце второго периода - s/(1+iT )2 
-						и т. д. После п циклов 	дисконтирования текущая стоимость суммы S равна
+						В конце первого периода дисконтирования величина текущей стоимости суммы 
+						$S$ равна $S/(1+ iT)$, в конце второго периода - $s/(1+iT )2$ 
+						и т. д. После $n$ циклов дисконтирования текущая стоимость суммы $S$ равна
 						
 
 						Note:
@@ -395,18 +383,42 @@
 
 						На практике применяются три варианта расчета простых процентов.
 						
-						1. Точные проценты с точным числом дней (обозначается 365/365 или АСТ/АСТ или АСТ/365). 
-						Дает самые точные результаты: 
-						$ n $ - срок в годах (точный), $ k = 365 (366) $ - число дней в году.
+						1. **Точные проценты с точным числом дней** (обозначается 365/365 или АСТ/АСТ или АСТ/365). 
+						Дает самые точные результаты:  
+
+						$ n $ - срок в годах (точный),  
+						$ k = 365 (366) $ - число дней в году.
 						
-						2. Обыкновенные проценты с точным числом дней (365/360 или АСТ/360).
-						Дает несколько больший результат, чем применение точных процентов: 
-						$ n $ - срок в годах (точный), $ k = 360 $ - число дней в году.
+						Note:
+
+					</script>
+				</section>
+
+				<section data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						### Практики начисления процентов
+
+						2. **Обыкновенные проценты с точным числом дней** (365/360 или АСТ/360).
+						Дает несколько больший результат, чем применение точных процентов:  
+
+						$ n $ - срок в годах (точный),  
+						$ k = 360 $ - число дней в году.
 						
-						3. Обыкновенные проценты с приближенным числом дней (360/360).
+						Note:
+
+					</script>
+				</section>
+
+				<section data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						### Практики начисления процентов
+
+						3. **Обыкновенные проценты с приближенным числом дней** (360/360).
 						Применяется тогда, когда не требуется большой точности, например при промежуточных 
-						расчетах:
-						$ n $ - срок в годах (приближенный), $ k = 360 $ - число дней в году.
+						расчетах:  
+
+						$ n $ - срок в годах (приближенный),  
+						$ k = 360 $ - число дней в году.
 						
 
 						Note:
@@ -418,7 +430,7 @@
 					Для вставки формул используйте конструкции $$ $$ или $ $
 					Греческие буквы можно также набрать с помощью TeX
 				 -->
-				<section data-markdown  data-separator-notes="^Note:">
+				<!-- <section data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
 						### Широта
 
@@ -591,29 +603,30 @@
 
 					</script>
 				</section>
+			-->
 
 				<!-- 
 					Для слайдов с программами используйте чистый HTML без доп аргументов в section
 					Помните, что id элементов должны быть уникальными
 					Проверьте, что Вы обращаетесь с элементов с id, которые существуют
 				-->
-				<section>
-					<h3>Конвертер величин</h3>
+				<!--<section>
+					<h3>Конвертер величин</h3> -->
 					<!-- Поле для ввода конвертируемого значения -->
-					<input type="text" name="" id="converter_value" 
-					placeholder="Градусы или радианы">
+					<!-- <input type="text" name="" id="converter_value" 
+					placeholder="Градусы или радианы"> -->
 					<!-- Выпадающее меню с вариантам конвертации -->
-					<select id="converter_type">
+					<!--<select id="converter_type">
 						<option value="radian">Радиан</option>
 						<option value="degree">Градус</option>
-					</select>
+					</select> -->
 					<!-- Кнопка конвертации -->
-					<input type="button" id="converter_button" value="Конвертировать">
+					<!-- <input type="button" id="converter_button" value="Конвертировать"> -->
 					<!-- Поле вывода -->
-					<output id="converter_out"></output>
-				</section>
+					<!-- <output id="converter_out"></output> -->
+				<!--</section>-->
 
-				<section class="center" data-markdown  data-separator-notes="^Note:">
+				<!--<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
 						Тригонометрия
 						-----------
@@ -633,15 +646,15 @@
 						Note:
 
 					</script>
-				</section>
+				</section> -->
 
-				<section>
-					<h3>Тригонометрический круг</h3>
+				<!--<section>
+					<h3>Тригонометрический круг</h3> -->
 					<!-- Блок для рисования библиотекой plotly -->
-					<div id="plot" style="height: 400px; margin-left:25%;"></div>
-				</section>
+					<!--<div id="plot" style="height: 400px; margin-left:25%;"></div>
+				</section>-->
 
-				<section data-markdown  data-separator-notes="^Note:">
+				<!--<section data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
 						### Тригонометрические функции
 
@@ -665,15 +678,15 @@
 						Note:
 
 					</script>
-				</section>
+				</section> -->
 
 				<section>
-					<h3>Таблица тригонометрических функций</h3>
-					<!-- Сюда сгенерируем тригонометрическую таблицу -->
+					<h3>Таблица порядковые номера дней в обычном году</h3>
+					<!-- Сюда сгенерируем таблицу -->
 					<output id="table"></output>
 				</section>
 
-				<section data-markdown  data-separator-notes="^Note:">
+				<!--<section data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
 						### Ортодромия
 		
@@ -713,34 +726,34 @@
 						Note:
 
 					</script>
-				</section>
+				</section> -->
 
-				<section>
+				<!--<section>
 					<h3>Рассчет ортодромии</h3>
-					<div>
+					<div> -->
 						<!-- Поля для ввода конвертируемого значения широты и долготы точки А-->
-						<label>Широта А
+						<!--<label>Широта А
 							<input type="text" id="latA">
 						</label> <br>
 						<label>Долгота А
 							<input type="text" id="lonA">
 						</label>
 					</div>
-					<div>
+					<div> -->
 						<!-- Поля для ввода конвертируемого значения широты и долготы точки B-->
-						<label>Широта B
+						<!--<label>Широта B
 							<input type="text" id="latB">
 						</label> <br>
 						<label>Долгота B
 							<input type="text" id="lonB">
 						</label>
 					</div>
-					<div>
+					<div> -->
 						<!-- Кнопка для расчета -->
-						<input id="ortodroma" type="button" value="Посчитать">
-					</div>
+						<!--<input id="ortodroma" type="button" value="Посчитать">
+					</div> -->
 					<!-- Вывод результата -->
-					<output id="ortodroma_out"></output>
+					<!--<output id="ortodroma_out"></output>
 				</section>
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
@@ -752,86 +765,86 @@
 						Note:
 
 					</script>
-				</section>
+				</section> -->
 
-				<section>
-					<h3>Игра 1. Города классические</h3>
+				<!-- <section>
+					<h3>Игра 1. Города классические</h3> -->
 					<!-- Кнопка начала игры -->
-					<div id="game1_button_start" class="show">
+					<!--<div id="game1_button_start" class="show">
 						<input type="button" value="Начать игру" id="game1_start">
-					</div>
+					</div> -->
 					<!-- Игровое поле -->
-					<div id="game1_area" class="hide">
+					<!--<div id="game1_area" class="hide"> -->
 						<!-- Лейбл для показа первой буквы города -->
-						<label for="game1_town">Ваш город:</label>
+						<!-- <label for="game1_town">Ваш город:</label> -->
 						<!-- Поле для ввода города -->
-						<input type="text" id="game1_town" >
+						<!-- <input type="text" id="game1_town" > -->
 						<!-- Кнопка для отправки города на сервер -->
-						<input type="button" id="game1_set_result" value="Отправить город">
+						<!-- <input type="button" id="game1_set_result" value="Отправить город"> -->
 						<!-- Текущая информация об игре -->
-						<output id="game1_town2"></output>
-					</div>
+						<!-- <output id="game1_town2"></output>
+					</div> -->
 					<!-- Карта для показа меток -->
-					<div class="map" id="game1_map"></div>
-				</section>
+					<!--<div class="map" id="game1_map"></div>
+				</section> -->
 
-				<section>
-					<h3>Игра 2. Города на расстояние</h3>
+				<!--<section>
+					<h3>Игра 2. Города на расстояние</h3> -->
 					<!-- Кнопка начала игры -->
-					<div id="game2_button_start" class="show">
+					<!--<div id="game2_button_start" class="show">
 						<input type="button" value="Начать игру" id="game2_start">
-					</div>
+					</div> -->
 					<!-- Игровое поле -->
-					<div id="game2_area" class="hide">
+					<!--<div id="game2_area" class="hide"> -->
 						<!-- Лейбл для показа первой буквы города -->
-						<label for="game2_town">Ваш город:</label>
+						<!-- <label for="game2_town">Ваш город:</label> -->
 						<!-- Поле для ввода города -->
-						<input type="text" id="game2_town" >
+						<!-- <input type="text" id="game2_town" > -->
 						<!-- Кнопка для отправки города на сервер -->
-						<input type="button" id="game2_set_result" value="Отправить город">
+						<!-- <input type="button" id="game2_set_result" value="Отправить город"> -->
 						<!-- Текущая информация об игре -->
-						<output id="game2_town2"></output>
-					</div>
+						<!--<output id="game2_town2"></output>
+					</div> -->
 					<!-- Текущий счет игры. -->
-					<div id="game2_score" class="hide">
+					<!-- <div id="game2_score" class="hide">
 						<span>Счет: </span>
 						<span id="game2_score"></span>
-					</div>
+					</div> -->
 					<!-- Карта для показа меток -->
-					<div class="map" id="game2_map"></div>
-				</section>
+					<!-- <div class="map" id="game2_map"></div>
+				</section> -->
 
-				<section>
-					<h3>Игра 3. Города на расстояние. Многопользовательская</h3>
+				<!-- <section>
+					<h3>Игра 3. Города на расстояние. Многопользовательская</h3> -->
 					<!-- Поле начала игры -->
-					<div id="game3_button_start" class="show">
-						<label for="game3_name"></label>
+					<!-- <div id="game3_button_start" class="show">
+						<label for="game3_name"></label> -->
 						<!-- Поле для ввода имени играющего -->
-						<input type="text" id="game3_name" value="Fox">
+						<!-- <input type="text" id="game3_name" value="Fox"> -->
 						<!-- Кнопка начала игры -->
-						<input type="button" value="Начать игру" id="game3_start">
-					</div>
+						<!-- <input type="button" value="Начать игру" id="game3_start">
+					</div> -->
 					<!-- Блок для информации об ожидании игрока -->
-					<div id="game3_waiting">
-					</div>
+					<!-- <div id="game3_waiting">
+					</div> -->
 					<!-- Игровое поле -->
-					<div id="game3_area" class="hide">
+					<!-- <div id="game3_area" class="hide"> -->
 						<!-- Лейбл для показа первой буквы города -->
-						<label for="game3_town">Ваш город:</label>
+						<!-- <label for="game3_town">Ваш город:</label> -->
 						<!-- Поле для ввода города -->
-						<input type="text" id="game3_town" >
+						<!-- <input type="text" id="game3_town" > -->
 						<!-- Кнопка для отправки города на сервер -->
-						<input type="button" id="game3_set_result" value="Отправить город">
+						<!-- <input type="button" id="game3_set_result" value="Отправить город"> -->
 						<!-- Текущая информация об игре -->
-						<output id="game3_town2"></output>
-					</div>
+						<!-- <output id="game3_town2"></output>
+					</div> -->
 					<!-- Текущий счет игры. -->
-					<div id="game3_score" class="hide">
+					<!-- <div id="game3_score" class="hide">
 						<span>Счет: </span>
 						<span id="game3_score"></span>
-					</div>
+					</div> -->
 					<!-- Карта для показа меток -->
-					<div class="map" id="game3_map"></div>
+					<!-- <div class="map" id="game3_map"></div>
 				</section>
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
@@ -842,7 +855,7 @@
 						Note:
 
 					</script>
-				</section>
+				</section> -->
 
 				<!-- 
 					Изображение можно вставить несколькими способами
@@ -850,23 +863,23 @@
 				<!-- 
 					Первый способ, растягиваем на весь экран. Используем для качественных фото
 				-->
-				<section
+				<!-- <section
 				data-background-image="image/1.jpg"
 				data-menu-title="Абстрактная живопись"
-				></section>
+				></section> -->
 				<!-- 
 					Второй способ, вставляем на весь экран, но показываем весь размер. Используем для вертикальных фото или 
 					любого другого качественного фото не совпадающем по отношением сторон
 				-->
-				<section
+				<!-- <section
 				data-background-image="image/yoda.jpg"
 				data-background-size="contain"
 				data-menu-title="Мастер Йода"
-				></section>
+				></section> -->
 				<!-- 
 					Третий способ, используем для менее качественных фото с небольшим разрешением
 				-->
-				<section data-menu-title="Конь Юлий">
+				<!-- <section data-menu-title="Конь Юлий">
 					<img src="image/juliy.jpg" alt="Конь Юлий">
 				</section>		
 				
@@ -874,7 +887,7 @@
 					<script type="text/template">
 						Спасибо за внимание
 					</script>
-				</section>
+				</section> -->
 
 
 
@@ -896,8 +909,6 @@
 		<script src="js/plotly-2.6.3.min.js"></script>
 		<!-- Библиотека географических карт, вставляется по инструкции на официальном сайте -->
 		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-		<!-- Библиотека websocket игрового сервера -->
-		<script src="http://city.9pr.ru/socket.io/socket.io.js"></script>
 
 		<script>
 			Reveal.initialize({
@@ -922,33 +933,33 @@
 		</script>
 		<script>
 			//Переменные слоя карты, содержающие метки городов
-			let markersLayer;
-			let markersLayer2;
-			let markersLayer3;
+			//let markersLayer;
+			//let markersLayer2;
+			//let markersLayer3;
 			//Массив меток городов
-			let markers;
-			let markers2;
-			let markers3 = [];
+			//let markers;
+			//let markers2;
+			//let markers3 = [];
 			//Копия последнего массива меток для отката назад, если понадобится
-			let markersCopy = [];
+			//let markersCopy = [];
 			//Счет игры
-			let score2 = [0,0];
-			let score3 = [0,0];
+			//let score2 = [0,0];
+			//let score3 = [0,0];
 			//Последние координаты для подсчета счета игры
-			let lastCoord2 = [];
-			let lastCoord3 = [];
+			//let lastCoord2 = [];
+			//let lastCoord3 = [];
 			//Имя играющего
-			let name;
+			//let name;
 			//Имя противника
-			let opponent;
+			//let opponent;
 			//Метка кто ходит первым, а кто вторым
-			let whoGo;
+			//let whoGo;
 			//Номер игровой комнаты
-			let room;
+			//let room;
 			//Ссылка на подключение сокета
-			let socket;
+			//let socket;
 			//Множество городов для третьей игры
-			let game3Set;
+			//let game3Set;
 
 			//Запускаем наши программы только после того, как вся страница полностью прогрузится
 			window.onload = () => {
@@ -962,634 +973,627 @@
 				});
 
 				//Рисуем круг
-				let layout = {
+				//let layout = {
 					//Заголовок
-					title: 'Тригонометрический круг',
+					//title: 'Тригонометрический круг',
 					//Ограничение координатной плоскости
-					xaxis: {
-						range: [-1.5, 1.5],
-					},
-					yaxis: {
-						range: [-1.5, 1.5],
-					},
+					//xaxis: {
+						//range: [-1.5, 1.5],
+					//},
+					//yaxis: {
+						//range: [-1.5, 1.5],
+					//},
 					//Ширина и высота координатной плоскости
-					width: 500,
-					height: 500,
+					//width: 500,
+					//height: 500,
 					//Графики
-					shapes: [
-						{
+					//shapes: [
+						//{
 							// окружность задается с помощью описаного около него прямоугольника
 							// по координатам левой нижнего и правого верхнего угла
-							type: 'circle',
-							xref: 'x',
-							yref: 'y',
-							x0: -1,
-							y0: -1,
-							x1: 1,
-							y1: 1,
-							line: {
-								color: 'rgba(50, 171, 96, 1)',
-							},
-						},
-						{
+							//type: 'circle',
+							//xref: 'x',
+							//yref: 'y',
+							//x0: -1,
+							//y0: -1,
+							//x1: 1,
+							//y1: 1,
+							//line: {
+								//color: 'rgba(50, 171, 96, 1)',
+							//},
+						//},
+						//{
 							// Отрезки задаются с помощью координат концом. Координаты считаются по теореме Пифагора
-							type: 'line',
-							x0: 0,
-							y0: 0,
-							x1: Math.sqrt(.51),
-							y1: .7,
-							line: {
-								color: 'blue',
-								width: 2.5,
-							},
-						},
-						{
-							type: 'line',
-							x0: 0,
-							y0: .7,
-							x1: Math.sqrt(.51),
-							y1: .7,
-							line: {
-								color: 'red',
-								width: 2.5,
-							},
-						},
-						{
-							type: 'line',
-							x0: Math.sqrt(.51),
-							y0: 0,
-							x1: Math.sqrt(.51),
-							y1: .7,
-							line: {
-								color: 'red',
-								width: 2.5,
-							},
-						},
-					],
+							//type: 'line',
+							//x0: 0,
+							//y0: 0,
+							//x1: Math.sqrt(.51),
+							//y1: .7,
+							//line: {
+								//color: 'blue',
+								//width: 2.5,
+							//},
+						//},
+						//{
+							//type: 'line',
+							//x0: 0,
+							//y0: .7,
+							//x1: Math.sqrt(.51),
+							//y1: .7,
+							//line: {
+								//color: 'red',
+								//width: 2.5,
+							//},
+						//},
+						//{
+							//type: 'line',
+							//x0: Math.sqrt(.51),
+							//y0: 0,
+							//x1: Math.sqrt(.51),
+							//y1: .7,
+							//line: {
+								//color: 'red',
+								//width: 2.5,
+							//},
+						//},
+					//],
 					//Подписи графиков
-					annotations: [
-						{
-							x: 0,
-							y: .7,
-							xref: 'x',
-							yref: 'y',
-							text: 'Yb',
-							arrowhead:7, 
-							showarrow: true,
-							ay: 0,
-							ax: -20,
-						},
-						{
-							x: Math.sqrt(.51),
-							y: 0,
-							xref: 'x',
-							yref: 'y',
-							text: 'Xb',
-							arrowhead:7, 
-							showarrow: true,
-							ay: 20,
-							ax: 0,
-						},
-						{
-							x:  Math.sqrt(.51),
-							y: .7,
-							text: 'B',
-						},
-						{
-							x: -.1,
-							y: -.1,
-							text: '0',
-							ax: 0,
-							ay: 0,
-						},
-					],
-				};
+					//annotations: [
+						//{
+							//x: 0,
+							//y: .7,
+							//xref: 'x',
+							//yref: 'y',
+							//text: 'Yb',
+							//arrowhead:7, 
+							//showarrow: true,
+							//ay: 0,
+							//ax: -20,
+						//},
+						//{
+							//x: Math.sqrt(.51),
+							//y: 0,
+							//xref: 'x',
+							//yref: 'y',
+							//text: 'Xb',
+							//arrowhead:7, 
+							//showarrow: true,
+							//ay: 20,
+							//ax: 0,
+						//},
+						//{
+							//x:  Math.sqrt(.51),
+							//y: .7,
+							//text: 'B',
+						//},
+						//{
+							//x: -.1,
+							//y: -.1,
+							//text: '0',
+							//ax: 0,
+							//ay: 0,
+						//},
+					//],
+				//};
 				//Рисуем график, 1 аргумент id блока, в который рисуем
 				//2 аргумент оставим пустой массив, 3 аргумент объект с данными
-				Plotly.newPlot('plot', [], layout);
+				//Plotly.newPlot('plot', [], layout);
 
 				//Рассчет ортодромы
 				//Программируем кнопка подсчета
-				document.querySelector('#ortodroma').onclick = (e) => {
+				//document.querySelector('#ortodroma').onclick = (e) => {
 					//Считываем координаты точек
-					let latA = document.querySelector('#latA').value;
-					let latB = document.querySelector('#latB').value;
-					let lonA = document.querySelector('#lonA').value;
-					let lonB = document.querySelector('#lonB').value;
+					//let latA = document.querySelector('#latA').value;
+					//let latB = document.querySelector('#latB').value;
+					//let lonA = document.querySelector('#lonA').value;
+					//let lonB = document.querySelector('#lonB').value;
 					//Делаем проверку на пустоту полей. Если хотя бы 1 не заполнено, то выводим ошибку
-					if (latA === '' || latB === '' || lonA === '' || lonB === '') {
-						alert('Не все поля заполнены');
-					}
+					//if (latA === '' || latB === '' || lonA === '' || lonB === '') {
+						//alert('Не все поля заполнены');
+					//}
 					//Ставим ограничение по максимальным значениям долготы и широты
-					if (
-						+latA < -90 || +latA > 90 ||
-						+latB < -90 || +latB > 90 ||
-						+lonA < -180 || +lonA > 180 ||
-						+lonB < -180 || +lonB > 180
-					) {
-						alert('Неверное значение одного из полей');
-					}
+					//if (
+						//+latA < -90 || +latA > 90 ||
+						//+latB < -90 || +latB > 90 ||
+						//+lonA < -180 || +lonA > 180 ||
+						//+lonB < -180 || +lonB > 180
+					//) {
+						//alert('Неверное значение одного из полей');
+					//}
 					//Считаем ортодрому между 2 точками
-					let result = ortodroma(+latA, +lonA, +latB, +lonB);
+					//let result = ortodroma(+latA, +lonA, +latB, +lonB);
 					//Выводим результат в специальное поле
-					document.querySelector('#ortodroma_out').innerHTML = result;
-				}
+					//document.querySelector('#ortodroma_out').innerHTML = result;
+				//}
 
 				// Конвертер величин
-				document.querySelector('#converter_button').onclick = () => {
+				//document.querySelector('#converter_button').onclick = () => {
 					//Считываем данные из формы
-					let converterValue = document.querySelector('#converter_value');
-					let converterType = document.querySelector('#converter_type');
-					let converterOut = document.querySelector('#converter_out');
+					//let converterValue = document.querySelector('#converter_value');
+					//let converterType = document.querySelector('#converter_type');
+					//let converterOut = document.querySelector('#converter_out');
 					//Делаем проверку на пустоту
-					if (converterValue.value === '') {
-						alert('Поле не заполнено');
-					}
+					//if (converterValue.value === '') {
+						//alert('Поле не заполнено');
+					//}
 					//Получаем значение выпадающего меню
 					// 0 - это радианы
 					// 1 - это градусы
-					let currentType = +converterType.options.selectedIndex;
-					if (currentType === 0) {
+					//let currentType = +converterType.options.selectedIndex;
+					//if (currentType === 0) {
 						//Формируем формулы перевода и рендерим катехом
-						result = katex.renderToString( 
-							math.evaluate('180 * ' + converterValue.value + '/ pi') + 
-							'^{\\circ}');
-					} else if (currentType === 1) {
+						//result = katex.renderToString( 
+							//math.evaluate('180 * ' + converterValue.value + '/ pi') + 
+							//'^{\\circ}');
+					//} else if (currentType === 1) {
 						//Формируем формулы перевода и рендерим катехом
-						result = katex.renderToString( math.simplify(converterValue.value + 
-						' * pi / 180').toTex());
-					}
+						//result = katex.renderToString( math.simplify(converterValue.value + 
+						//' * pi / 180').toTex());
+					//}
 					//Записываем результат в поле вывода
-					converterOut.innerHTML = result;
-				}
+					//converterOut.innerHTML = result;
+				//}
 
-				//Таблица тригонометрических функций
+				//Таблица порядковых номеров дней в обычном году
 				//Массив значений для таблицы
-				let values = ['0', 'pi/6', 'pi/4', 'pi/3', 'pi/2', 
-					'pi', '3pi/2', '2pi',	
+				let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 
+					'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
 				];
 				//Массив функций для таблицы
-				let functions = ['sin', 'cos', 'tan'];
+				let days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+					'11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+					'21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
 				//Запускаем функцию генерирующую таблицу
-				trigonometry(values, functions);
+				trigonometry(months, days);
 
 				// Игра 1
 				//Программируем клик по кнопке старт
-				document.querySelector('#game1_start').onclick = () => {
+				//document.querySelector('#game1_start').onclick = () => {
 					//Скрываем саму кнопку
-					document.querySelector('#game1_start').style.display = 'none';
+					//document.querySelector('#game1_start').style.display = 'none';
 					//Отобразим игровое поле
-					document.querySelector('#game1_area').style.display = 'block';
+					//document.querySelector('#game1_area').style.display = 'block';
 					//Инициализируем карту
-					map_game1 = L.map('game1_map').setView([51.478, 0, 0], 13);
+					//map_game1 = L.map('game1_map').setView([51.478, 0, 0], 13);
 					//Подгрузим тайлы карты и добавим их на карту
-					L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
-					.addTo(map_game1);
-				}
+					//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+					//.addTo(map_game1);
+				//}
 				//Что бы города не повторялись используем множество. так как в нем все элементы уникальны
-				const game1Set = new Set();
+				//const game1Set = new Set();
 				//Програмируем клик отправки города
-				document.querySelector('#game1_set_result').onclick = async () => {
+				//document.querySelector('#game1_set_result').onclick = async () => {
 					//получаем город из поля
-					let town = document.querySelector('#game1_town').value;
+					//let town = document.querySelector('#game1_town').value;
 					//Делаем проверку, что этот город еще не был введен
-					if (game1Set.has(town)) {
-						alert('Данный город уже был');
-					} else {
+					//if (game1Set.has(town)) {
+						//alert('Данный город уже был');
+					//} else {
 						//Если такого города нет, то добавим его в множество
-						game1Set.add(town);
+						//game1Set.add(town);
 						//делаем запрос к игровому серверу о получении информации о введенном городе
-						let response = await fetch(`http://city.9pr.ru/city/${town}`);
+						//let response = await fetch(`http://city.9pr.ru/city/${town}`);
 						//получаем текст сообщения
-						let text = await response.text();
+						//let text = await response.text();
 						//так как ответ приходит в формате JSON, предварительно отпарсим его
-						text = JSON.parse(text);
+						//text = JSON.parse(text);
 						//Делаем проверку на ошибки, если поле с ошибкой не пусто, то оповещаем, если нет, идем дальше
-						if (text.error === undefined || text.error === null) {
+						//if (text.error === undefined || text.error === null) {
 							//делаем проверку на существование города. если город существует, то идем дальше.
-							if (text.no === undefined) {
+							//if (text.no === undefined) {
 								//Получаем последнюю букву города, чтобы следующий начинался на предыдущую
-								let lastletter = lastLetter(town);
+								//let lastletter = lastLetter(town);
 								//Предварительно очистим слой с метками
-								if (markersLayer !== undefined) {
-									markersLayer.clearLayers();
-								}
+								//if (markersLayer !== undefined) {
+									//markersLayer.clearLayers();
+								//}
 								//Обнулим массив меток
-								markers = [];
+								//markers = [];
 								//Добавим метку введенного пользователем города
-								markers.push(
-									L.marker([text.latitude, text.longitude]).
-									bindPopup(text.city)
-								);
+								//markers.push(
+									//L.marker([text.latitude, text.longitude]).
+									//bindPopup(text.city)
+								//);
 								//делаем запрос к игровому серверу о получении города на последнюю букву введенного города
-								response = await fetch(`http://city.9pr.ru/lastletter/${lastletter}`);
+								//response = await fetch(`http://city.9pr.ru/lastletter/${lastletter}`);
 								//получаем текст сообщения
-								text = await response.text();
+								//text = await response.text();
 								//так как ответ приходит в формате JSON, предварительно отпарсим его
-								text = JSON.parse(text);
+								//text = JSON.parse(text);
 								//Делаем проверку на ошибки, если поле с ошибкой не пусто, то оповещаем, если нет, идем дальше
-								if (text.error === undefined || text.error === null) {
+								//if (text.error === undefined || text.error === null) {
 									//Добавим город в множество, чтобы не повторялся и этот город
-									game1Set.add(text.city);
+									//game1Set.add(text.city);
 									//Добавим и его в массив меток для карты
-									markers.push(
-										L.marker([text.latitude, text.longitude]).
-										bindPopup(text.city)
-									);
+									//markers.push(
+										//L.marker([text.latitude, text.longitude]).
+										//bindPopup(text.city)
+									//);
 									//Покажем информацию об обоих городах
-									document.querySelector('#game1_town2').innerHTML = `
-										<div>Ваш город: ${town}. <br> Город противника
-											${text.city}</div>
-									`;
+									//document.querySelector('#game1_town2').innerHTML = `
+										//<div>Ваш город: ${town}. <br> Город противника
+											//${text.city}</div>
+									//`;
 									//Для удобства первую букву нового города покажем в лейбле 
-									document.querySelector('label[for="game1_town"]').textContent = `
-											Ваш город на ${lastLetter(text.city).toUpperCase()}:
-									`;
+									//document.querySelector('label[for="game1_town"]').textContent = `
+											//Ваш город на ${lastLetter(text.city).toUpperCase()}:
+									//`;
 									//а так же сразу вставим её в поле ввода
-									document.querySelector('#game1_town').value = 
-										lastLetter(text.city).toUpperCase();
+									//document.querySelector('#game1_town').value = 
+										//lastLetter(text.city).toUpperCase();
 									//Добавим метки на карту
-									markersLayer = L.featureGroup(markers).addTo(map_game1);
+									//markersLayer = L.featureGroup(markers).addTo(map_game1);
 									//Передвинем карту, чтобы обе метки оказались в зоне видимости
-									map_game1.fitBounds(markersLayer.getBounds());
-								} else {
+									//map_game1.fitBounds(markersLayer.getBounds());
+								//} else {
 									//Выведем ошибку
-									document.querySelector('#game1_town1').innerHTML =
-									'Произошла ошибка, игра окончена.';
-									console.log('Ошибка: ', text.error);
-								}
-							} else {
+									//document.querySelector('#game1_town1').innerHTML =
+									//'Произошла ошибка, игра окончена.';
+									//console.log('Ошибка: ', text.error);
+								//}
+							//} else {
 								//Выведем ошибку
-								alert('Такого города не существует');
-							}
-						} else {
+								//alert('Такого города не существует');
+							//}
+						//} else {
 							//Выведем ошибку
-							document.querySelector('#game1_town1').innerHTML =
-							'Произошла ошибка, игра окончена.';
-							console.log('Ошибка: ', text.error);
-						}
-					}
-				}
+							//document.querySelector('#game1_town1').innerHTML =
+							//'Произошла ошибка, игра окончена.';
+							//console.log('Ошибка: ', text.error);
+						//}
+					//}
+				//}
 
 				// Игра 2
 				//Программируем клик по кнопке старт
-				document.querySelector('#game2_start').onclick = () => {
+				//document.querySelector('#game2_start').onclick = () => {
 					//Скрываем саму кнопку
-					document.querySelector('#game2_start').style.display = 'none';
+					//document.querySelector('#game2_start').style.display = 'none';
 					//Отобразим игровое поле
-					document.querySelector('#game2_area').style.display = 'block';
+					//document.querySelector('#game2_area').style.display = 'block';
 					//Отобразим счет и покажем нулевой счет
-					document.querySelector('#game2_score').style.display = 'block';
-					document.querySelector('#game2_score').innerHTML = 'Игрок 0 : 0 Компьютер';
+					//document.querySelector('#game2_score').style.display = 'block';
+					//document.querySelector('#game2_score').innerHTML = 'Игрок 0 : 0 Компьютер';
 					//Инициализируем карту
-					map_game2 = L.map('game2_map').setView([51.478, 0, 0], 13);
+					//map_game2 = L.map('game2_map').setView([51.478, 0, 0], 13);
 					//Подгрузим тайлы карты и добавим их на карту
-					L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
-					.addTo(map_game2);
+					//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+					//.addTo(map_game2);
 					//Обнуляем переменную счета на начало игры
-					score2 = [0, 0];
-				}
+					//score2 = [0, 0];
+				//}
 				//Что бы города не повторялись используем множество. так как в нем все элементы уникальны
-				const game2Set = new Set();
+				//const game2Set = new Set();
 				//Програмируем клик отправки города
-				document.querySelector('#game2_set_result').onclick = async () => {
+				//document.querySelector('#game2_set_result').onclick = async () => {
 					//получаем город из поля
-					let town = document.querySelector('#game2_town').value;
+					//let town = document.querySelector('#game2_town').value;
 					//Делаем проверку, что этот город еще не был введен
-					if (game2Set.has(town)) {
-						alert('Данный город уже был');
-					} else {
+					//if (game2Set.has(town)) {
+						//alert('Данный город уже был');
+					//} else {
 						//Если такого города нет, то добавим его в множество
-						game2Set.add(town);
+						//game2Set.add(town);
 						//делаем запрос к игровому серверу о получении информации о введенном городе
-						let response = await fetch(`http://city.9pr.ru/city/${town}`);
+						//let response = await fetch(`http://city.9pr.ru/city/${town}`);
 						//получаем текст сообщения
-						let text = await response.text();
+						//let text = await response.text();
 						//так как ответ приходит в формате JSON, предварительно отпарсим его
-						text = JSON.parse(text);
+						//text = JSON.parse(text);
 						//Делаем проверку на ошибки, если поле с ошибкой не пусто, то оповещаем, если нет, идем дальше
-						if (text.error === undefined || text.error === null) {
+						//if (text.error === undefined || text.error === null) {
 							//делаем проверку на существование города. если город существует, то идем дальше.
-							if (text.no === undefined) {
+							//if (text.no === undefined) {
 								//Получаем последнюю букву города, чтобы следующий начинался на предыдущую
-								let lastletter = lastLetter(town);
+								//let lastletter = lastLetter(town);
 								//Предварительно очистим слой с метками
-								if (markersLayer2 !== undefined) {
-									markersLayer2.clearLayers();
-								}
+								//if (markersLayer2 !== undefined) {
+									//markersLayer2.clearLayers();
+								//}
 								//Обнулим массив меток
-								markers2 = [];
+								//markers2 = [];
 								//Если в переменной последних координат есть запись, то считаем ортодрому
 								//между Вашим городом и городом компьютера. Отбрасываем дробную часть и записываем
 								//в счет игрока
-								if (lastCoord2.length === 2) {
-									score2[0] += Math.floor(
-										ortodroma(
-											text.latitude, text.longitude,
-											lastCoord2[0], lastCoord2[1]
-										)
-									);
-								}
+								//if (lastCoord2.length === 2) {
+									//score2[0] += Math.floor(
+										//ortodroma(
+											//text.latitude, text.longitude,
+											//lastCoord2[0], lastCoord2[1]
+										//)
+									//);
+								//}
 								//обновим переменную последних координат
-								lastCoord2 = [text.latitude, text.longitude];
+								//lastCoord2 = [text.latitude, text.longitude];
 								//Добавим метку введенного пользователем города
-								markers2.push(
-									L.marker([text.latitude, text.longitude]).
-									bindPopup(text.city)
-								);
+								//markers2.push(
+									//L.marker([text.latitude, text.longitude]).
+									//bindPopup(text.city)
+								//);
 								//делаем запрос к игровому серверу о получении города на последнюю букву введенного города
-								response = await fetch(`http://city.9pr.ru/lastletter/${lastletter}`);
+								//response = await fetch(`http://city.9pr.ru/lastletter/${lastletter}`);
 								//получаем текст сообщения
-								text = await response.text();
+								//text = await response.text();
 								//так как ответ приходит в формате JSON, предварительно отпарсим его
-								text = JSON.parse(text);
+								//text = JSON.parse(text);
 								//Делаем проверку на ошибки, если поле с ошибкой не пусто, то оповещаем, если нет, идем дальше
-								if (text.error === undefined || text.error === null) {
+								//if (text.error === undefined || text.error === null) {
 									//Добавим город в множество, чтобы не повторялся и этот город
-									game2Set.add(text.city);
+									//game2Set.add(text.city);
 									//Если в переменной последних координат есть запись, то считаем ортодрому
 									//между Вашим городом и городом компьютера. Отбрасываем дробную часть и записываем
 									//в счет компьютера
-									if (lastCoord2.length === 2) {
-										score2[1] += Math.floor(
-											ortodroma(
-												text.latitude, text.longitude,
-												lastCoord2[0], lastCoord2[1]
-											)
-										);
-									}
+									//if (lastCoord2.length === 2) {
+										//score2[1] += Math.floor(
+											//ortodroma(
+												//text.latitude, text.longitude,
+												//lastCoord2[0], lastCoord2[1]
+											//)
+										//);
+									//}
 									//обновим переменную последних координат
-									lastCoord2 = [text.latitude, text.longitude];
+									//lastCoord2 = [text.latitude, text.longitude];
 									//Добавим и его в массив меток для карты
-									markers2.push(
-										L.marker([text.latitude, text.longitude]).
-										bindPopup(text.city)
-									);
+									//markers2.push(
+										//L.marker([text.latitude, text.longitude]).
+										//bindPopup(text.city)
+									//);
 									//Покажем информацию об обоих городах
-									document.querySelector('#game2_town2').innerHTML = `
-										<div>Ваш город: ${town}. <br> Город противника
-											${text.city}</div>
-									`;
+									//document.querySelector('#game2_town2').innerHTML = `
+										//<div>Ваш город: ${town}. <br> Город противника
+											//${text.city}</div>
+									//`;
 									//Для удобства первую букву нового города покажем в лейбле 
-									document.querySelector('label[for="game2_town"]').textContent = `
-											Ваш город на ${lastLetter(text.city).toUpperCase()}:
-									`;
+									//document.querySelector('label[for="game2_town"]').textContent = `
+											//Ваш город на ${lastLetter(text.city).toUpperCase()}:
+									//`;
 									//а так же сразу вставим её в поле ввода
-									document.querySelector('#game2_town').value = 
-										lastLetter(text.city).toUpperCase();
+									//document.querySelector('#game2_town').value = 
+										//lastLetter(text.city).toUpperCase();
 									//Добавим метки на карту
-									markersLayer2 = L.featureGroup(markers2).addTo(map_game2);
+									//markersLayer2 = L.featureGroup(markers2).addTo(map_game2);
 									//Передвинем карту, чтобы обе метки оказались в зоне видимости
-									map_game2.fitBounds(markersLayer2.getBounds());
+									//map_game2.fitBounds(markersLayer2.getBounds());
 									//Выведем счет на экран по принципу. Разница между ведущим игроком
 									// и отстающим у ведущего и 0 у отстающего всегда. Это сделано, чтобы 
 									// не перегружать экран большими числами
-									document.querySelector('#game2_score').innerHTML =
-									score2[0] >= score2[1] ?
-									`<b>Игрок</b> ${score2[0]-score2[1]} : 0 Компьютер` :
-									`Игрок 0 : ${score2[1]-score2[0]} Компьютер`
-								} else {
+									//document.querySelector('#game2_score').innerHTML =
+									//score2[0] >= score2[1] ?
+									//`<b>Игрок</b> ${score2[0]-score2[1]} : 0 Компьютер` :
+									//`Игрок 0 : ${score2[1]-score2[0]} Компьютер`
+								//} else {
 									//Выведем ошибку
-									document.querySelector('#game2_town2').innerHTML =
-									'Произошла ошибка, игра окончена.';
-									console.log('Ошибка: ', text.error);
-								}
-							} else {
+									//document.querySelector('#game2_town2').innerHTML =
+									//'Произошла ошибка, игра окончена.';
+									//console.log('Ошибка: ', text.error);
+								//}
+							//} else {
 								//Выведем ошибку
-								alert('Такого города не существует');
-							}
-						} else {
+								//alert('Такого города не существует');
+							//}
+						//} else {
 							//Выведем ошибку
-							document.querySelector('#game2_town2').innerHTML =
-							'Произошла ошибка, игра окончена.';
-							console.log('Ошибка: ', text.error);
-						}
-					}
-				}
+							//document.querySelector('#game2_town2').innerHTML =
+							//'Произошла ошибка, игра окончена.';
+							//console.log('Ошибка: ', text.error);
+						//}
+					//}
+				//}
 
 				//3игра
 				//Что бы города не повторялись используем множество. так как в нем все элементы уникальны
-				game3Set = new Set();
+				//game3Set = new Set();
 				//Программируем клик по кнопке старт
-				document.querySelector('#game3_start').onclick = () => {
+				//document.querySelector('#game3_start').onclick = () => {
 					//Если сокеты игрового сервера не прогрузились, то играть бессмысленно, выдаем ошибку.
 					//В противном случае подключаемся к игровому серверу.
-					if (typeof io !== 'undefined') {
+					//if (typeof io !== 'undefined') {
 						//Подключаемся к сокетам игрового сервера
-						socket = io("http://city.9pr.ru");
+						//socket = io("http://city.9pr.ru");
 						//Все события сокетов проводим внутри этого блока
-						socket.on("connect", () => {
+						//socket.on("connect", () => {
 							//сокет ожидания игрока. Как только к игре кто-то присоеденился, то мы получим этот сокет
-							socket.on('wait', (body) => {
-								room = body.room;
-								Object.keys(body.gamers).forEach(gamePlayer => {
-									if (name !== gamePlayer) {
-										opponent = gamePlayer;
-										whoGo = body.gamers[gamePlayer][1];
-										document.querySelector('#game3_waiting').innerHTML = `К игре присоеденился: ${gamePlayer}. Ожидайте начала игры.`;
-										setTimeout(() => {
-											document.querySelector('#game3_button_start').style.display = 'none';
-											document.querySelector('#game3_area').style.display = 'none';
-											document.querySelector('#game3_waiting').style.display = 'none';
-											document.querySelector('#game3_score').style.display = 'block';
-											document.querySelector('#game3_score').innerHTML = `"${name}" 0 : 0 "${opponent}"`;
-											map_game3 = L.map('game3_map').setView([51.478, 0, 0], 13);
-											L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map_game3);
-											score3 = [0,0];
-											if (whoGo == 1) {
-												document.querySelector('#game3_waiting').style.display = 'block';
-												document.querySelector('#game3_waiting').innerHTML = 'Подождите, пока Ваш оппонент сделает ход.';
-											} else {
-												document.querySelector('#game3_area').style.display = 'block';
-											}
-										}, 3000);
-									}
-								});
-							});
-							socket.on('getCity', (body) => {
-								score3 = body.score;
-								if (score3[whoGo] > score3[(whoGo+1)%2]) {
-									document.querySelector('#game3_score').innerHTML = 
-										`<p><b>"${name}" ${score3[whoGo]}</b> : ${score3[(whoGo+1)%2]} "${opponent}"</p>`;
-								} else if (score3[whoGo] < score3[(whoGo+1)%2]) {
-									document.querySelector('#game3_score').innerHTML = 
-										`<p>"${name}" ${score3[whoGo]} : <b>${score3[(whoGo+1)%2]} "${opponent}"</b></p>`;
-								} else {
-									document.querySelector('#game3_score').innerHTML = 
-										`<p>"${name}" 0 : 0 "${opponent}"</p>`;
-								}
-								if (body.name === opponent) {
-									if (markersLayer3 !== undefined) {
-										markersLayer3.clearLayers();
-									}
-									game3Set.add(body.city.city);
-									lastCoord3 = [body.city.latitude, body.city.longitude];
-									markers3.push(L.marker([body.city.latitude, body.city.longitude]).bindPopup(body.city.city));
-									if (markers3.length > 2) {
-										markers3.shift();
-									}
-									markersLayer3 = L.featureGroup(markers3).addTo(map_game3);
-									map_game3.fitBounds(markersLayer3.getBounds());
-									document.querySelector('#game3_area').style.display = 'block';
-									document.querySelector('#game3_waiting').style.display = 'none';
-									let lastletter2 = lastLetter(body.city.city);
-									document.querySelector('#game3_town').value = lastletter2.toUpperCase();
-									document.querySelector('label[for="game3_town"]').textContent = `Ваш город на ${lastletter2.toUpperCase()}:`;
-								}
-							});
-							socket.on('error', (body) => {
-								if (body.type === 'pre_game') {
-									document.querySelector('#game3_start').style.display = 'inline';
-									document.querySelector('#game3_waiting').style.display = 'none';
-									alert(body.text);
-								} else if (body.type === 'in_game') {
-									document.querySelector('#game3_area').style.display = 'inline';
-									document.querySelector('#game3_waiting').style.display = 'none';
-									if (markersLayer3 !== undefined) {
-										markersLayer3.clearLayers();
-									}
-									markersLayer3 = L.featureGroup(markersCopy).addTo(map_game3);
-									map_game3.fitBounds(markersLayer3.getBounds());
-									game3Set.delete($('#game3_town').value);
-									alert(body.text);
-								}
-							});
-							socket.on('exit', (data) => {
-								document.querySelector('#game3_area').style.display = 'none';
-								document.querySelector('#game3_score').style.display = 'none';
-								document.querySelector('#game3_map').style.display = 'none';
-								document.querySelector('#game3_waiting').style.display = 'block';
-								document.querySelector('#game3_waiting').innerHTML = `
-									<p>К сожалению ${data.name} покинул игру. Игра окончена.</p>
-									<p>Счет игры "${name}" ${score3[whoGo]} : ${score3[(whoGo+1)%2]} "${opponent}"</p>
-								`;
-								document.querySelector('#game3_start').style.display = 'block';
-								game3Set.clear();
-							});
-							socket.on("disconnect", (reason) => {
-								document.querySelector('#game3_area').style.display = 'none';
-								document.querySelector('#game3_score').style.display = 'none';
-								document.querySelector('#game3_map').style.display = 'none';
-								document.querySelector('#game3_waiting').style.display = 'block';
-								document.querySelector('#game3_waiting').innerHTML = `
-									<p>К сожалению соединение с сервером потеряно. Игра окончена.</p>
-									<p>Счет игры "${name}" ${score3[whoGo]} : ${score3[(whoGo+1)%2]} "${opponent}"</p>
-									Для старта новой игры - обновите страницу.`;
-								game3Set.clear();
-							});
-						});
+							//socket.on('wait', (body) => {
+								//room = body.room;
+								//Object.keys(body.gamers).forEach(gamePlayer => {
+									//if (name !== gamePlayer) {
+										//opponent = gamePlayer;
+										//whoGo = body.gamers[gamePlayer][1];
+										//document.querySelector('#game3_waiting').innerHTML = `К игре присоеденился: ${gamePlayer}. Ожидайте начала игры.`;
+										//setTimeout(() => {
+											//document.querySelector('#game3_button_start').style.display = 'none';
+											//document.querySelector('#game3_area').style.display = 'none';
+											//document.querySelector('#game3_waiting').style.display = 'none';
+											//document.querySelector('#game3_score').style.display = 'block';
+											//document.querySelector('#game3_score').innerHTML = `"${name}" 0 : 0 "${opponent}"`;
+											//map_game3 = L.map('game3_map').setView([51.478, 0, 0], 13);
+											//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map_game3);
+											//score3 = [0,0];
+											//if (whoGo == 1) {
+												//document.querySelector('#game3_waiting').style.display = 'block';
+												//document.querySelector('#game3_waiting').innerHTML = 'Подождите, пока Ваш оппонент сделает ход.';
+											//} else {
+												//document.querySelector('#game3_area').style.display = 'block';
+											//}
+										//}, 3000);
+									//}
+								//});
+							//});
+							//socket.on('getCity', (body) => {
+								//score3 = body.score;
+								//if (score3[whoGo] > score3[(whoGo+1)%2]) {
+									//document.querySelector('#game3_score').innerHTML = 
+										//`<p><b>"${name}" ${score3[whoGo]}</b> : ${score3[(whoGo+1)%2]} "${opponent}"</p>`;
+								//} else if (score3[whoGo] < score3[(whoGo+1)%2]) {
+									//document.querySelector('#game3_score').innerHTML = 
+										//`<p>"${name}" ${score3[whoGo]} : <b>${score3[(whoGo+1)%2]} "${opponent}"</b></p>`;
+								//} else {
+									//document.querySelector('#game3_score').innerHTML = 
+										//`<p>"${name}" 0 : 0 "${opponent}"</p>`;
+								//}
+								//if (body.name === opponent) {
+									//if (markersLayer3 !== undefined) {
+										//markersLayer3.clearLayers();
+									//}
+									//game3Set.add(body.city.city);
+									//lastCoord3 = [body.city.latitude, body.city.longitude];
+									//markers3.push(L.marker([body.city.latitude, body.city.longitude]).bindPopup(body.city.city));
+									//if (markers3.length > 2) {
+										//markers3.shift();
+									//}
+									//markersLayer3 = L.featureGroup(markers3).addTo(map_game3);
+									//map_game3.fitBounds(markersLayer3.getBounds());
+									//document.querySelector('#game3_area').style.display = 'block';
+									//document.querySelector('#game3_waiting').style.display = 'none';
+									//let lastletter2 = lastLetter(body.city.city);
+									//document.querySelector('#game3_town').value = lastletter2.toUpperCase();
+									//document.querySelector('label[for="game3_town"]').textContent = `Ваш город на ${lastletter2.toUpperCase()}:`;
+								//}
+							//});
+							
+							//socket.on('error', (body) => {
+								//if (body.type === 'pre_game') {
+									//document.querySelector('#game3_start').style.display = 'inline';
+									//document.querySelector('#game3_waiting').style.display = 'none';
+									//alert(body.text);
+								//} else if (body.type === 'in_game') {
+									//document.querySelector('#game3_area').style.display = 'inline';
+									//document.querySelector('#game3_waiting').style.display = 'none';
+									//if (markersLayer3 !== undefined) {
+										//markersLayer3.clearLayers();
+									//}
+									//markersLayer3 = L.featureGroup(markersCopy).addTo(map_game3);
+									//map_game3.fitBounds(markersLayer3.getBounds());
+									//game3Set.delete($('#game3_town').value);
+									//alert(body.text);
+								//}
+							//});
+							//socket.on('exit', (data) => {
+								//document.querySelector('#game3_area').style.display = 'none';
+								//document.querySelector('#game3_score').style.display = 'none';
+								//document.querySelector('#game3_map').style.display = 'none';
+								//document.querySelector('#game3_waiting').style.display = 'block';
+								//document.querySelector('#game3_waiting').innerHTML = `
+									//<p>К сожалению ${data.name} покинул игру. Игра окончена.</p>
+									//<p>Счет игры "${name}" ${score3[whoGo]} : ${score3[(whoGo+1)%2]} "${opponent}"</p>
+								//`;
+								//document.querySelector('#game3_start').style.display = 'block';
+								//game3Set.clear();
+							//});
+							//socket.on("disconnect", (reason) => {
+								//document.querySelector('#game3_area').style.display = 'none';
+								//document.querySelector('#game3_score').style.display = 'none';
+								//document.querySelector('#game3_map').style.display = 'none';
+								//document.querySelector('#game3_waiting').style.display = 'block';
+								//document.querySelector('#game3_waiting').innerHTML = `
+									//<p>К сожалению соединение с сервером потеряно. Игра окончена.</p>
+									//<p>Счет игры "${name}" ${score3[whoGo]} : ${score3[(whoGo+1)%2]} "${opponent}"</p>
+									//Для старта новой игры - обновите страницу.`;
+								//game3Set.clear();
+							//});
+						//});
 
-						document.querySelector('#game3_start').style.display = 'none';
-						document.querySelector('#game3_waiting').style.display = 'block';
-						name = document.querySelector('#game3_name').value;
-						document.querySelector('#game3_waiting').innerHTML = `<p>Ожидайте игрока</p>`;
-						socket.emit('start', name);
-					} else {
-						alert('Соединение с сервером отсутствует, попробуйте начать игру позднее, перезагрузив страницу.');
-					}
-				};
-				document.querySelector('#game3_set_result').onclick = async () => {
-					let town = document.querySelector('#game3_town').value;
-					if (game3Set.has(town)) {
-						alert('Данный город уже был');
-					} else {
-						game3Set.add(town);
-						let response = await fetch(`http://city.9pr.ru/city/${town}`);
-						let text = await response.text();
-						text = JSON.parse(text);
-						if (text.error === undefined || text.error === null) {
-							if (text.no === undefined) {
-								if (markersLayer3 !== undefined) {
-									markersLayer3.clearLayers();
-								}
+						//document.querySelector('#game3_start').style.display = 'none';
+						//document.querySelector('#game3_waiting').style.display = 'block';
+						//name = document.querySelector('#game3_name').value;
+						//document.querySelector('#game3_waiting').innerHTML = `<p>Ожидайте игрока</p>`;
+						//socket.emit('start', name);
+					//} else {
+						//alert('Соединение с сервером отсутствует, попробуйте начать игру позднее, перезагрузив страницу.');
+					//}
+				//};
+				//document.querySelector('#game3_set_result').onclick = async () => {
+					//let town = document.querySelector('#game3_town').value;
+					//if (game3Set.has(town)) {
+					//	alert('Данный город уже был');
+					//} else {
+						//game3Set.add(town);
+						//let response = await fetch(`http://city.9pr.ru/city/${town}`);
+						//let text = await response.text();
+						//text = JSON.parse(text);
+						//if (text.error === undefined || text.error === null) {
+							//if (text.no === undefined) {
+								//if (markersLayer3 !== undefined) {
+									//markersLayer3.clearLayers();
+								//}
 								
-								if (lastCoord3.length === 2) {
-									score3[whoGo] += Math.floor(ortodroma (text.latitude, text.longitude, lastCoord3[0], lastCoord3[1]));
-								}
-								lastCoord3 = [text.latitude, text.longitude];
-								markersCopy = Object.values(markers3);
-								markers3.push(L.marker([text.latitude, text.longitude]).bindPopup(text.city));
-								if (markers3.length > 2) {
-									markers3.shift();
-								}
-								markersLayer3 = L.featureGroup(markers3).addTo(map_game3);
-								map_game3.fitBounds(markersLayer3.getBounds());
-								socket.emit('sendCity', {
-									score: score3,
-									name,
-									room,
-									city: text,
-								});
-								document.querySelector('#game3_button_start').style.display = 'none';
-								document.querySelector('#game3_area').style.display = 'none';
-								document.querySelector('#game3_waiting').innerHTML = 'Подождите, пока Ваш оппонент сделает ход.';
-								document.querySelector('#game3_waiting').style.display = 'block';
-							} else {
-								alert(text.no);
-							}
-						} else {
-							document.querySelector('#game3_town2').innerHTML = `
-								<p>Произошла ошибка, игра окончена.</p>
-							`;
-							document.querySelector('#game3_set_result').style.display = 'none';
-							console.log('Ошибка: ', text.error);
-						}
-					}
-				};
+								//if (lastCoord3.length === 2) {
+									//score3[whoGo] += Math.floor(ortodroma (text.latitude, text.longitude, lastCoord3[0], lastCoord3[1]));
+								//}
+								//lastCoord3 = [text.latitude, text.longitude];
+								//markersCopy = Object.values(markers3);
+								//markers3.push(L.marker([text.latitude, text.longitude]).bindPopup(text.city));
+								//if (markers3.length > 2) {
+								//	markers3.shift();
+								//}
+								//markersLayer3 = L.featureGroup(markers3).addTo(map_game3);
+								//map_game3.fitBounds(markersLayer3.getBounds());
+								//socket.emit('sendCity', {
+									//score: score3,
+									//name,
+									//room,
+									//city: text,
+								//});
+								//document.querySelector('#game3_button_start').style.display = 'none';
+								//document.querySelector('#game3_area').style.display = 'none';
+								//document.querySelector('#game3_waiting').innerHTML = 'Подождите, пока Ваш оппонент сделает ход.';
+								//document.querySelector('#game3_waiting').style.display = 'block';
+							//} else {
+								//alert(text.no);
+							//}
+						//} else {
+							//document.querySelector('#game3_town2').innerHTML = `
+								//<p>Произошла ошибка, игра окончена.</p>
+							//`;
+							//document.querySelector('#game3_set_result').style.display = 'none';
+							//console.log('Ошибка: ', text.error);
+						//}
+					//}
+				//};
 		
 			}
 
-			function ortodroma (latA, lonA, latB, lonB) {
-				return 6372795 * Math.acos (
-					Math.cos(deg2rad(latB)) * Math.cos(deg2rad(latA)) *
-					Math.cos(deg2rad(lonA) - deg2rad(lonB)) + 
-					Math.sin(deg2rad(latB)) * Math.sin(deg2rad(latA))
-				);
-			}
+			//function ortodroma (latA, lonA, latB, lonB) {
+				//return 6372795 * Math.acos (
+					//Math.cos(deg2rad(latB)) * Math.cos(deg2rad(latA)) *
+					//Math.cos(deg2rad(lonA) - deg2rad(lonB)) + 
+					//Math.sin(deg2rad(latB)) * Math.sin(deg2rad(latA))
+				//);
+			//}
 
-			function deg2rad (degree) {
-				return Math.PI * degree / 180;
-			}
+			//function deg2rad (degree) {
+				//return Math.PI * degree / 180;
+			//}
 
-			function trigonometry(values, functions) {
+			function trigonometry(months, days) {
 				let table = '<table><thead>';
-					table += '<tr><td>Радианы</td>';
-					for (let value of values) {
-						table += `<td>${katex.renderToString(
-							Algebrite.simplify(value).toLatexString())}</td>`;
+				table += '<tr>';
+				for (let month of months) {
+					table += `<td>${month}</td>`;
+				}
+				table += '</tr><thead><tbody>';
+				for (let month of months) {
+					table += '<tr>';
+					for (let day of days) {
+						c = day;
+						table += `<td>${c}</td>`;
 					}
-					table += '</tr><thead><tbody>';
-					for (let func of functions) {
-						table += `<tr><td>${func}${
-							katex.renderToString('\\alpha')}</td>`;
-							for (value of values) {
-								let result = Algebrite.simplify(func+'('+value+')');
-								if (result.cons.car !== null &&
-									result.cons.car.printname == 'tan') {
-										table += `<td>${katex.renderToString(
-											'\\infty'
-										)}</td>`;
-								} else {
-									table += `<td>${katex.renderToString(
-											result.toLatexString()
-										)}</td>`;
-								}
-							}
-					}
+					table += '</tr>';
+				}
 				table += '</tbody></table>';
 				document.querySelector('#table').innerHTML = table;
 			}
 
-			function lastLetter (town) {
-				let lastletter;
-				for (let i = -1; i > -town.length; i--) {
-					lastletter = town.substr(i, 1);
-					if (['ь', 'ъ', 'ы'].indexOf(lastletter) === -1) {
-						break;
-					}
-				}
-				return lastletter;
-			}
+			//function lastLetter (town) {
+				//let lastletter;
+				//for (let i = -1; i > -town.length; i--) {
+					//lastletter = town.substr(i, 1);
+					//if (['ь', 'ъ', 'ы'].indexOf(lastletter) === -1) {
+						//break;
+					//}
+				//}
+				//return lastletter;
+			//}
 		</script>
 	</body>
 </html>
