@@ -429,6 +429,216 @@
 					</script>
 				</section>
 
+				<section data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### **Примеры решения задач**  
+						#### *Наращение по простой процентной ставке*
+
+						Предпринимателю 14 февраля была предоставлена ссуда в размере 20 тыс. руб. с 
+						погашением 14 июля того же года под процентную ставку 30% годовых. Рассчитайте 
+						различными способами сумму к погашению, если начисляются простые проценты и год 
+						невисокосный.
+
+						Note:
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Наращение по простой процентной ставке*
+
+						**Дано**: 
+						$P = 20000$ руб.;  
+						$i = 0,3$;  
+						$k_1 = 365$;  
+						$k_2 = 360$;  
+						$k_3 = 360$;  
+						$d_0 = 14$ февраля;  
+						$d_1 = 14$ июля.  
+
+						**Найти**: $S=?$.  
+
+						Note:
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Наращение по простой процентной ставке*
+
+						**Решение**:  
+
+						$n_l = \tfrac{N(d_{l+1}) - N(d_l))}{k} = \tfrac{t}{k}$;
+
+						**1. Точные проценты с точным числом дней:**
+
+						$N(d_0) = 45, N(d_1) = 195$;  
+						
+						$n_1 = \tfrac{195-45}{365} = \tfrac{150}{365}$;   
+
+						$S = 20000(1+\tfrac{150}{365}\cdot 0,3) = 22466$ руб.
+
+						Note:
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Наращение по простой процентной ставке*
+
+						**2. Обыкновенные проценты с точным числом дней:**  
+
+						$N(d_0) = 45, N(d_1) = 195$;   
+
+						$n_1 = \tfrac{195-45}{360} = \tfrac{150}{360}$;    
+
+						$S = 20000(1+\tfrac{150}{360}\cdot 0,3) = 22500$ руб. 
+
+						Note:
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Наращение по простой процентной ставке*
+
+						**3. Обыкновенные проценты с приближенным числом дней:**  
+
+						$N(d_0) = 45, N(d_1) = 195$;   
+
+						$n_1 = \tfrac{195-45}{360} = \tfrac{150}{360}$;    
+
+						$S = 20000(1+\tfrac{150}{360}\cdot 0,3) = 22500$ руб.
+
+						Note:
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Дисконтирование по простой процентной ставке* 
+
+						**1. Точные проценты с точным числом дней:** 
+
+						Какова должна быть продолжительность ссуды в днях для того, чтобы долг, равный 
+						10 тыс. руб., вырос до 15 тыс. руб. при условии, что начисляются простые проценты 
+						по ставке 10% годовых (АСТ/АСТ)?
+
+
+						Note:
+
+
+					</script>
+				</section>
+
+				<section data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Дисконтирование по простой процентной ставке*
+
+						**Дано**: 
+						$P = 10000$ руб.;   
+						$S = 15000$;  
+						$k = 365$;  
+						$i = 0,1$ дней.  
+
+						**Найти**: $t=?$. 
+						
+						Note:
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Дисконтирование по простой процентной ставке* 
+
+						**Решение**:  
+						
+						$S = P(1+ni)$;    
+
+						$t = \tfrac{S - P}{Pi}\cdot k$;  
+						
+						$t = \tfrac{15000 - 10000}{10000\cdot 0,1}\cdot 365 = 1825$ руб.;
+
+						Note:
+
+
+					</script>
+				</section>
+
+				<section data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### **Примеры решения задач**  
+						#### *Дисконтирование по простой процентной ставке*
+
+						**2. Обыкновенные проценты с точным числом дней:**
+
+						Через 180 дней после подписания договора должник уплатит 1 млн руб. Кредит выдан 
+						под 10% годовых. Какова первоначальная сумма долга при условии, что временная база 
+						равна 360 дням?
+
+						Note:
+
+					</script>
+				</section>
+
+				<section data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Дисконтирование по простой процентной ставке*
+
+						**Дано**: 
+						$S = 1000000$ руб.;   
+						$i = 0,1$;  
+						$k = 360$;  
+						$t = 180$ дней.  
+
+						**Найти**: $P=?$. 
+						
+						Note:
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Дисконтирование по простой процентной ставке* 
+
+						**Решение**:  
+						
+						$S = P(1+ni)$;    
+
+						$P = \tfrac{S}{1+ni} = \tfrac{S}{1+\tfrac{t}{k}\cdot i} = 
+						\tfrac{1000000}{1+\tfrac{180}{360}\cdot 0,1} = 952381$ руб.; 
+
+						$D = S-P = 1000000-952381=47619$ руб.
+
+						Note:
+
+
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### *Дисконтирование по простой процентной ставке*
+
+						**Решение**:  
+
+						**3. Обыкновенные проценты с приближенным числом дней:**  
+						
+						
+
+						Note:
+
+
+					</script>
+				</section>
+
 				<!-- 
 					Для вставки формул используйте конструкции $$ $$ или $ $
 					Греческие буквы можно также набрать с помощью TeX
@@ -1568,23 +1778,53 @@
 				//return Math.PI * degree / 180;
 			//}
 
-			function trigonometry(months, days) {
+			//function trigonometry(months, days) {
+				//let table = '<table><thead>';
+				//table += '<tr>';
+				//for (let month of months) {
+					//table += `<td>${month}</td>`;
+				//}
+				//table += '</tr><thead><tbody>';
+				//for (let month of months) {
+				//	table += '<tr>';
+				//	for (let day of days) {
+				//		c = day;
+				//		table += `<td>${c}</td>`;
+				//	}
+				//	table += '</tr>';
+				//}
+				//table += '</tbody></table>';
+				//document.querySelector('#table').innerHTML = table;
+			//}
+
+
+			//Название месяцев
+			let months = ['Январь', 'Февраль', 'Март'];
+			//Количество дней с января и до ноября включительно, первый элемент 0
+			let days = [0, 31, 28, 31];
+			//Запускаем функцию генерирующую таблицу
+			daysTable(months, days);
+			function daysTable(months, days) {
 				let table = '<table><thead>';
+				//Заполняем 1 строчку
 				table += '<tr>';
 				for (let month of months) {
 					table += `<td>${month}</td>`;
 				}
 				table += '</tr><thead><tbody>';
-				for (let month of months) {
+				//Заполняем саму таблицу
+				//В месяце не больше 31 дней, поэтому используем генератор интервала от 0 до 31
+				for (let day of [...Array(31).keys()]) {
 					table += '<tr>';
-					for (let day of days) {
-						c = day;
-						table += `<td>${c}</td>`;
+					//В каждом месяце по формуле записываем порядковый номер месяца
+					for (let month in months) {
+					let currentDay = 1 + day + month * days[month];
+							table += `<td>${currentDay}</td>`;
 					}
 					table += '</tr>';
 				}
 				table += '</tbody></table>';
-				document.querySelector('#table').innerHTML = table;
+				document.querySelector('#table').innerHTML = table;			
 			}
 
 			//function lastLetter (town) {
