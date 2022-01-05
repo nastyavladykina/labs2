@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 	<head>
@@ -881,429 +882,56 @@
 					</script>
 				</section>
 
-				
-
-				
-
-				<!-- 
-					Для вставки формул используйте конструкции $$ $$ или $ $
-					Греческие буквы можно также набрать с помощью TeX
-				 -->
-				<!-- <section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Широта
-
-						Широта - угол $\phi$ между местным направлением зенита
-						и плоскостью экватора, отчитываемый от $0^\circ$ до $90^\circ$
-						в обе стороны от экватора. Географическую широту точек
-						лежащих в северном полушарии, принято считать положительной,
-						широту в южном полушарии отрицательной. 
-						
-
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Широта
-
-						Из-за отличия формы Земли от шара, географическая
-						широта точек несколько отличается от их геоцентрической
-						широты, то есть угла между направлением на данную точку
-						из центра Земли и плоскостью экватора.
-						
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Широта
-
-						Широту места можно определить с помощью таких
-						астрономических инструментов, как секстант или 
-						гномон. Также можно воспользоваться системами
-						GPS, ГЛОНАСС и др.
-						
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Долгота
-
-						Долгота - это двугранный угол $\lambda$ между 
-						плоскостью меридиана, проходящего через данную точку,
-						и плоскостью начального нулевого меридиана, от которого
-						ведется отсчет долготы. Долготу от $0^\circ$ до $180^\circ$ к
-						востоку от нулевого меридиана называют восточной, к западу -
-						западной. Восточные долготы принято считать положительными,
-						западные - отрицательными.
-						
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Долгота
-
-						Выбор нулевого меридиана произволен и зависит
-						только от соглашений. Сейчас за нулевой меридиан принят
-						меридиан, проходящий рядом с обсерваторией в Гринвиче. 
-						От долготы так же зависит местное солнечное время.
-						
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Формы записи географических координат
-
-						Координаты (широта от $-90^\circ$ до $90^\circ$,
-						долгота от $-180^\circ$ до $180^\circ$) могут
-						записываться:
-
-						
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Формы записи географических координат
-
-						- в градусах в виде десятичной дроби (
-							современный вариант)
-						- в градусах и минутах с десятичной дробью
-						- в градусах, минутах и секундах с десятичной
-							дробью (историческая форма записи)
-						- предыдущие варианты с дополнительными буквами 
-							(E, W, S, N)
-						
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Формы записи географических координат
-
-						Форматы можно пересчитать по формуле:
-						$1^\circ$ = $60'$, $1'$ = $60''$.
-						
-						Примеры:  
-						$55,755831^\circ$  $37,617613^\circ$  
-						$N55,755831^\circ$  $E37,617613^\circ$  
-						$55^\circ45.35'$  $37^\circ37.06'$    
-						$55^\circ45'20.9916''N$  $37^\circ37'3.6228''E$    
-
-						Note:
-
-					</script>
-				</section>
-
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Величины
-						-----------
+						### Исходный код программ 
 
-					</script>
-				</section>
+						``` 
+						//Название месяцев
+						let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль',
+						'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+						//Количество дней с января и до ноября включительно, первый элемент 0
+						let days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30];
+						let days2 = [];
+						let temp = 0;
+						for (let i in days) {
+							temp += days[i];
+							days2.push(temp);
+						}
+						//Запускаем функцию генерирующую таблицу
+						daysTable(months, days);
+			
+						function daysTable(months, days) {
+							let table = '<table><thead>';
+							//Заполняем 1 строчку
+							table += '<tr>';
+							for (let month of months) {
+								table += `<td>${month}</td>`;
+							}
+							table += '</tr><thead><tbody>';	
+							//Заполняем саму таблицу
+							//В месяце не больше 31 дней, поэтому используем генератор интервала от 0 до 31
+							for (let day of [...Array(31).keys()]) {
+							table += '<tr>';
+							//В каждом месяце по формуле записываем порядковый номер месяца
+							for (let month in months) {
+								let currentDay = 1 + day + days2[+month];
+								if (day+1 > days[+month+1]) {
+									table += `<td>-</td>`;
+								}
+								else {
+									table += `<td>${currentDay}</td>`;
+								}	
+							}
+							table += '</tr>';
+						}
+						table += '</tbody></table>';
+						document.querySelector('#table').innerHTML = table;			
+					
+						```
 
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Радиан
-
-						Радиан (от лат. radius луч) - угол соответствующий дуге,
-						длина которой равна её радиусу. Единица измерения
-						плоских углов в международной системе единиц (СИ)
-						
 						Note:
-
 					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Градус
-
-						Градус (от лат. шаг, ступень) - обозначается. 
-						Один полный оборот соответствует углу в $360^\circ$.
-						В прямом угле $90^\circ$. В развернутом $180^\circ$.
-						
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Перевод величин
-
-						$$
-							\alpha^\circ = \alpha_\text{рад}\tfrac{180^\circ}{\pi}
-						$$
-
-						$$
-							\alpha_\text{рад} = \tfrac{\pi}{180^\circ} \alpha_\text{рад}
-						$$
-						Note:
-
-					</script>
-				</section>
-			-->
-
-				<!-- 
-					Для слайдов с программами используйте чистый HTML без доп аргументов в section
-					Помните, что id элементов должны быть уникальными
-					Проверьте, что Вы обращаетесь с элементов с id, которые существуют
-				-->
-				<!--<section>
-					<h3>Конвертер величин</h3> -->
-					<!-- Поле для ввода конвертируемого значения -->
-					<!-- <input type="text" name="" id="converter_value" 
-					placeholder="Градусы или радианы"> -->
-					<!-- Выпадающее меню с вариантам конвертации -->
-					<!--<select id="converter_type">
-						<option value="radian">Радиан</option>
-						<option value="degree">Градус</option>
-					</select> -->
-					<!-- Кнопка конвертации -->
-					<!-- <input type="button" id="converter_button" value="Конвертировать"> -->
-					<!-- Поле вывода -->
-					<!-- <output id="converter_out"></output> -->
-				<!--</section>-->
-
-				<!--<section class="center" data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						Тригонометрия
-						-----------
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Тригонометрические функции
-
-						Тригонометрические функции - элементарные функции,
-						которые исторически возникли при рассмотрении
-						прямоугольных треугольников и выражали зависимости длин
-						сторон этих треугольников от прямых углов при гипотенузе.
-						
-						Note:
-
-					</script>
-				</section> -->
-
-				<!--<section>
-					<h3>Тригонометрический круг</h3> -->
-					<!-- Блок для рисования библиотекой plotly -->
-					<!--<div id="plot" style="height: 400px; margin-left:25%;"></div>
-				</section>-->
-
-				<!--<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Тригонометрические функции
-
-						$$
-						\sin \alpha = \tfrac{y_b}{R}
-						$$
-						$$
-						\cos \alpha = \tfrac{x_b}{R}
-						$$
-						$$
-						\tg \alpha = 
-							\tfrac{\sin \alpha}{\cos \alpha} =
-							\tfrac{y_b}{x_b}
-						$$
-						$$
-						\ctg \alpha = 
-							\tfrac{\cos \alpha}{\sin \alpha} =
-							\tfrac{x_b}{y_b}
-						$$
-						
-						Note:
-
-					</script>
-				</section> -->
-
-				<section>
-					<h3>Таблица порядковые номера дней в обычном году</h3>
-					<!-- Сюда сгенерируем таблицу -->
-					<output id="table"></output>
-				</section>
-
-				<!--<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Ортодромия
-		
-						Ортодромия (от греч. 
-						$O\rho\theta\omicron\delta\rho\omicron\mu\omicron\varsigma$
-						 прямой путь) в геометрии -
-						кратчайшая линия между двумя точками на поверхности вращения.
-						
-						В картографии и навигации ортодромия - кратчайшее расстояние
-						между двумя точками на поверхности Земли. 
-
-						Частыми случаями ортодромии являются меридианы и экватор.
-						
-						Note:
-
-					</script>
-				</section>
-
-				<section data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Рассчет ортодромии
-
-						Длина ортодромии равна $D = l \cdot \delta $, где
-						$
-							\delta = \arccos(
-								\sin \phi_1 \cdot \sin \phi_2 +
-								\cos \phi_1 \cdot \cos \phi_2 \cdot
-								\cos(\lambda_2 - \lambda_1)
-							)
-						$
-
-						$\phi_1$ = широта начальной точки в градусах  
-						$\phi_2$ = широта конечной точки в градусах  
-						$\lambda_1$ = долгота начальной точки в градусах  
-						$\lambda_2$ = долгота конечной точки в градусах  
-						$l$ = длина дуги меридиана небесного тела
-						Note:
-
-					</script>
-				</section> -->
-
-				<!--<section>
-					<h3>Рассчет ортодромии</h3>
-					<div> -->
-						<!-- Поля для ввода конвертируемого значения широты и долготы точки А-->
-						<!--<label>Широта А
-							<input type="text" id="latA">
-						</label> <br>
-						<label>Долгота А
-							<input type="text" id="lonA">
-						</label>
-					</div>
-					<div> -->
-						<!-- Поля для ввода конвертируемого значения широты и долготы точки B-->
-						<!--<label>Широта B
-							<input type="text" id="latB">
-						</label> <br>
-						<label>Долгота B
-							<input type="text" id="lonB">
-						</label>
-					</div>
-					<div> -->
-						<!-- Кнопка для расчета -->
-						<!--<input id="ortodroma" type="button" value="Посчитать">
-					</div> -->
-					<!-- Вывод результата -->
-					<!--<output id="ortodroma_out"></output>
-				</section>
-
-				<section class="center" data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						Игры
-						----
-
-						
-						Note:
-
-					</script>
-				</section> -->
-
-				<!-- <section>
-					<h3>Игра 1. Города классические</h3> -->
-					<!-- Кнопка начала игры -->
-					<!--<div id="game1_button_start" class="show">
-						<input type="button" value="Начать игру" id="game1_start">
-					</div> -->
-					<!-- Игровое поле -->
-					<!--<div id="game1_area" class="hide"> -->
-						<!-- Лейбл для показа первой буквы города -->
-						<!-- <label for="game1_town">Ваш город:</label> -->
-						<!-- Поле для ввода города -->
-						<!-- <input type="text" id="game1_town" > -->
-						<!-- Кнопка для отправки города на сервер -->
-						<!-- <input type="button" id="game1_set_result" value="Отправить город"> -->
-						<!-- Текущая информация об игре -->
-						<!-- <output id="game1_town2"></output>
-					</div> -->
-					<!-- Карта для показа меток -->
-					<!--<div class="map" id="game1_map"></div>
-				</section> -->
-
-				<!--<section>
-					<h3>Игра 2. Города на расстояние</h3> -->
-					<!-- Кнопка начала игры -->
-					<!--<div id="game2_button_start" class="show">
-						<input type="button" value="Начать игру" id="game2_start">
-					</div> -->
-					<!-- Игровое поле -->
-					<!--<div id="game2_area" class="hide"> -->
-						<!-- Лейбл для показа первой буквы города -->
-						<!-- <label for="game2_town">Ваш город:</label> -->
-						<!-- Поле для ввода города -->
-						<!-- <input type="text" id="game2_town" > -->
-						<!-- Кнопка для отправки города на сервер -->
-						<!-- <input type="button" id="game2_set_result" value="Отправить город"> -->
-						<!-- Текущая информация об игре -->
-						<!--<output id="game2_town2"></output>
-					</div> -->
-					<!-- Текущий счет игры. -->
-					<!-- <div id="game2_score" class="hide">
-						<span>Счет: </span>
-						<span id="game2_score"></span>
-					</div> -->
-					<!-- Карта для показа меток -->
-					<!-- <div class="map" id="game2_map"></div>
-				</section> -->
-
-				<!-- <section>
-					<h3>Игра 3. Города на расстояние. Многопользовательская</h3> -->
-					<!-- Поле начала игры -->
-					<!-- <div id="game3_button_start" class="show">
-						<label for="game3_name"></label> -->
-						<!-- Поле для ввода имени играющего -->
-						<!-- <input type="text" id="game3_name" value="Fox"> -->
-						<!-- Кнопка начала игры -->
-						<!-- <input type="button" value="Начать игру" id="game3_start">
-					</div> -->
-					<!-- Блок для информации об ожидании игрока -->
-					<!-- <div id="game3_waiting">
-					</div> -->
-					<!-- Игровое поле -->
-					<!-- <div id="game3_area" class="hide"> -->
-						<!-- Лейбл для показа первой буквы города -->
-						<!-- <label for="game3_town">Ваш город:</label> -->
-						<!-- Поле для ввода города -->
-						<!-- <input type="text" id="game3_town" > -->
-						<!-- Кнопка для отправки города на сервер -->
-						<!-- <input type="button" id="game3_set_result" value="Отправить город"> -->
-						<!-- Текущая информация об игре -->
-						<!-- <output id="game3_town2"></output>
-					</div> -->
-					<!-- Текущий счет игры. -->
-					<!-- <div id="game3_score" class="hide">
-						<span>Счет: </span>
-						<span id="game3_score"></span>
-					</div> -->
-					<!-- Карта для показа меток -->
-					<!-- <div class="map" id="game3_map"></div>
 				</section>
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
@@ -1314,44 +942,116 @@
 						Note:
 
 					</script>
-				</section> -->
+				</section> 
 
-				<!-- 
-					Изображение можно вставить несколькими способами
-				-->
-				<!-- 
-					Первый способ, растягиваем на весь экран. Используем для качественных фото
-				-->
-				<!-- <section
-				data-background-image="image/1.jpg"
-				data-menu-title="Абстрактная живопись"
-				></section> -->
-				<!-- 
-					Второй способ, вставляем на весь экран, но показываем весь размер. Используем для вертикальных фото или 
-					любого другого качественного фото не совпадающем по отношением сторон
-				-->
-				<!-- <section
-				data-background-image="image/yoda.jpg"
-				data-background-size="contain"
-				data-menu-title="Мастер Йода"
-				></section> -->
-				<!-- 
-					Третий способ, используем для менее качественных фото с небольшим разрешением
-				-->
-				<!-- <section data-menu-title="Конь Юлий">
-					<img src="image/juliy.jpg" alt="Конь Юлий">
-				</section>		
 				
+				<section
+				data-background-image="image/11.jpg"
+				data-menu-title="Финмат"
+				></section> 
+
+				<section
+				data-background-image="image/12.jpg"
+				data-menu-title="Калькулятор"
+				></section> 
+
+				<section
+				data-background-image="image/13.jpg"
+				data-menu-title="Учебник"
+				></section> 
+				
+
+				<!-- Блок для исходных кодов-->
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
-						Спасибо за внимание
+						Исходный код программ
+						----
+
+						Note:
+
 					</script>
-				</section> -->
+				</section>
 
+				<section>
+					<h3>Таблица порядковые номера дней в обычном году</h3>
+					<!-- Сюда сгенерируем таблицу -->
+					<output id="table"></output>
+				</section>
 
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						
+						<h4>Подсчет кредита по всем $3$ практикам на срок от $30$ дней до $10$ лет по 
+						простым и сложным процентным ставкам</h4>
 
-			</div>
-		</div>
+						<div class="col-md-7 col-lg-8">
+							<h4 class="mb-3"><ya-tr-span data-index="14-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Billing address" data-translation="Платежный адрес" data-type="trSpan">Даты погашения</ya-tr-span></h4>
+							<div class="py-5 text-center">
+								<h2><ya-tr-span data-index="0-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Checkout form" data-translation="Форма оформления заказа" data-type="trSpan">
+									<table class="table">
+									<thead >
+									<p class="text-center text-muted"><ya-tr-span data-index="12-0" data-translated="true" 
+										data-source-lang="en" data-target-lang="ru" data-value="" data-translation="© 2021 Компания, 
+										Inc" data-type="trSpan">ПРОСТАЯ ПРОЦЕНТНАЯ СТАВКА:</ya-tr-span></p>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">Наращения</th>
+										<th scope="col">Дисконтирование</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<th scope="row">Английская</th>
+										<td id="AN1"></td>
+										<td id="AN2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Немецкая </th>
+										<td id="NEM1"></td>
+										<td id="NEM2"></td>
+									</tr>
+									<tr>
+										<th scope="row">французская</th>
+										<td id="HR1"></td>
+										<td id="HR2"></td>
+									</tr>
+									</tbody>
+								</table>
+									<br>
+									<table class="table">
+										<thead >
+										<p class="text-center text-muted"><ya-tr-span data-index="12-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="" data-translation="© 2021 Компания, Inc" data-type="trSpan">СЛОЖНАЯ ПРОЦЕНТНАЯ СТАВКА:</ya-tr-span></p>
+										<tr>
+											<th scope="col"></th>
+											<th scope="col">Наращения</th>
+											<th scope="col">Дисконтирование</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<th scope="row">Английская</th>
+											<td id="ANHard1"></td>
+											<td id="ANHard2"></td>
+										</tr>
+										<tr>
+											<th scope="row">Немецкая </th>
+											<td id="NEMHard1"></td>
+											<td id="NEMHard2"></td>
+										</tr>
+										<tr>
+											<th scope="row">французская</th>
+											<td id="HRHard1"></td>
+											<td id="HRHard2"></td>
+										</tr>
+										</tbody>
+									</table></ya-tr-span></h2>
+			
+							</div>
+						</div> 
+					</script>
+				</section>
+
+				
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
@@ -1391,34 +1091,6 @@
 			});
 		</script>
 		<script>
-			//Переменные слоя карты, содержающие метки городов
-			//let markersLayer;
-			//let markersLayer2;
-			//let markersLayer3;
-			//Массив меток городов
-			//let markers;
-			//let markers2;
-			//let markers3 = [];
-			//Копия последнего массива меток для отката назад, если понадобится
-			//let markersCopy = [];
-			//Счет игры
-			//let score2 = [0,0];
-			//let score3 = [0,0];
-			//Последние координаты для подсчета счета игры
-			//let lastCoord2 = [];
-			//let lastCoord3 = [];
-			//Имя играющего
-			//let name;
-			//Имя противника
-			//let opponent;
-			//Метка кто ходит первым, а кто вторым
-			//let whoGo;
-			//Номер игровой комнаты
-			//let room;
-			//Ссылка на подключение сокета
-			//let socket;
-			//Множество городов для третьей игры
-			//let game3Set;
 
 			//Запускаем наши программы только после того, как вся страница полностью прогрузится
 			window.onload = () => {
@@ -1431,664 +1103,134 @@
 					}
 				});
 
-				//Рисуем круг
-				//let layout = {
-					//Заголовок
-					//title: 'Тригонометрический круг',
-					//Ограничение координатной плоскости
-					//xaxis: {
-						//range: [-1.5, 1.5],
-					//},
-					//yaxis: {
-						//range: [-1.5, 1.5],
-					//},
-					//Ширина и высота координатной плоскости
-					//width: 500,
-					//height: 500,
-					//Графики
-					//shapes: [
-						//{
-							// окружность задается с помощью описаного около него прямоугольника
-							// по координатам левой нижнего и правого верхнего угла
-							//type: 'circle',
-							//xref: 'x',
-							//yref: 'y',
-							//x0: -1,
-							//y0: -1,
-							//x1: 1,
-							//y1: 1,
-							//line: {
-								//color: 'rgba(50, 171, 96, 1)',
-							//},
-						//},
-						//{
-							// Отрезки задаются с помощью координат концом. Координаты считаются по теореме Пифагора
-							//type: 'line',
-							//x0: 0,
-							//y0: 0,
-							//x1: Math.sqrt(.51),
-							//y1: .7,
-							//line: {
-								//color: 'blue',
-								//width: 2.5,
-							//},
-						//},
-						//{
-							//type: 'line',
-							//x0: 0,
-							//y0: .7,
-							//x1: Math.sqrt(.51),
-							//y1: .7,
-							//line: {
-								//color: 'red',
-								//width: 2.5,
-							//},
-						//},
-						//{
-							//type: 'line',
-							//x0: Math.sqrt(.51),
-							//y0: 0,
-							//x1: Math.sqrt(.51),
-							//y1: .7,
-							//line: {
-								//color: 'red',
-								//width: 2.5,
-							//},
-						//},
-					//],
-					//Подписи графиков
-					//annotations: [
-						//{
-							//x: 0,
-							//y: .7,
-							//xref: 'x',
-							//yref: 'y',
-							//text: 'Yb',
-							//arrowhead:7, 
-							//showarrow: true,
-							//ay: 0,
-							//ax: -20,
-						//},
-						//{
-							//x: Math.sqrt(.51),
-							//y: 0,
-							//xref: 'x',
-							//yref: 'y',
-							//text: 'Xb',
-							//arrowhead:7, 
-							//showarrow: true,
-							//ay: 20,
-							//ax: 0,
-						//},
-						//{
-							//x:  Math.sqrt(.51),
-							//y: .7,
-							//text: 'B',
-						//},
-						//{
-							//x: -.1,
-							//y: -.1,
-							//text: '0',
-							//ax: 0,
-							//ay: 0,
-						//},
-					//],
-				//};
-				//Рисуем график, 1 аргумент id блока, в который рисуем
-				//2 аргумент оставим пустой массив, 3 аргумент объект с данными
-				//Plotly.newPlot('plot', [], layout);
-
-				//Рассчет ортодромы
-				//Программируем кнопка подсчета
-				//document.querySelector('#ortodroma').onclick = (e) => {
-					//Считываем координаты точек
-					//let latA = document.querySelector('#latA').value;
-					//let latB = document.querySelector('#latB').value;
-					//let lonA = document.querySelector('#lonA').value;
-					//let lonB = document.querySelector('#lonB').value;
-					//Делаем проверку на пустоту полей. Если хотя бы 1 не заполнено, то выводим ошибку
-					//if (latA === '' || latB === '' || lonA === '' || lonB === '') {
-						//alert('Не все поля заполнены');
-					//}
-					//Ставим ограничение по максимальным значениям долготы и широты
-					//if (
-						//+latA < -90 || +latA > 90 ||
-						//+latB < -90 || +latB > 90 ||
-						//+lonA < -180 || +lonA > 180 ||
-						//+lonB < -180 || +lonB > 180
-					//) {
-						//alert('Неверное значение одного из полей');
-					//}
-					//Считаем ортодрому между 2 точками
-					//let result = ortodroma(+latA, +lonA, +latB, +lonB);
-					//Выводим результат в специальное поле
-					//document.querySelector('#ortodroma_out').innerHTML = result;
-				//}
-
-				// Конвертер величин
-				//document.querySelector('#converter_button').onclick = () => {
-					//Считываем данные из формы
-					//let converterValue = document.querySelector('#converter_value');
-					//let converterType = document.querySelector('#converter_type');
-					//let converterOut = document.querySelector('#converter_out');
-					//Делаем проверку на пустоту
-					//if (converterValue.value === '') {
-						//alert('Поле не заполнено');
-					//}
-					//Получаем значение выпадающего меню
-					// 0 - это радианы
-					// 1 - это градусы
-					//let currentType = +converterType.options.selectedIndex;
-					//if (currentType === 0) {
-						//Формируем формулы перевода и рендерим катехом
-						//result = katex.renderToString( 
-							//math.evaluate('180 * ' + converterValue.value + '/ pi') + 
-							//'^{\\circ}');
-					//} else if (currentType === 1) {
-						//Формируем формулы перевода и рендерим катехом
-						//result = katex.renderToString( math.simplify(converterValue.value + 
-						//' * pi / 180').toTex());
-					//}
-					//Записываем результат в поле вывода
-					//converterOut.innerHTML = result;
-				//}
-
-				//Таблица порядковых номеров дней в обычном году
-				//Массив значений для таблицы
-				let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 
-					'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
-				];
-				//Массив функций для таблицы
-				let days = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
-					'11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
-					'21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
+				//Название месяцев
+				let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль',
+				'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+				//Количество дней с января и до ноября включительно, первый элемент 0
+				let days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30];
+				let days2 = [];
+				let temp = 0;
+				for (let i in days) {
+					temp += days[i];
+					days2.push(temp);
+				}
 				//Запускаем функцию генерирующую таблицу
 				daysTable(months, days);
-
-				// Игра 1
-				//Программируем клик по кнопке старт
-				//document.querySelector('#game1_start').onclick = () => {
-					//Скрываем саму кнопку
-					//document.querySelector('#game1_start').style.display = 'none';
-					//Отобразим игровое поле
-					//document.querySelector('#game1_area').style.display = 'block';
-					//Инициализируем карту
-					//map_game1 = L.map('game1_map').setView([51.478, 0, 0], 13);
-					//Подгрузим тайлы карты и добавим их на карту
-					//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
-					//.addTo(map_game1);
-				//}
-				//Что бы города не повторялись используем множество. так как в нем все элементы уникальны
-				//const game1Set = new Set();
-				//Програмируем клик отправки города
-				//document.querySelector('#game1_set_result').onclick = async () => {
-					//получаем город из поля
-					//let town = document.querySelector('#game1_town').value;
-					//Делаем проверку, что этот город еще не был введен
-					//if (game1Set.has(town)) {
-						//alert('Данный город уже был');
-					//} else {
-						//Если такого города нет, то добавим его в множество
-						//game1Set.add(town);
-						//делаем запрос к игровому серверу о получении информации о введенном городе
-						//let response = await fetch(`http://city.9pr.ru/city/${town}`);
-						//получаем текст сообщения
-						//let text = await response.text();
-						//так как ответ приходит в формате JSON, предварительно отпарсим его
-						//text = JSON.parse(text);
-						//Делаем проверку на ошибки, если поле с ошибкой не пусто, то оповещаем, если нет, идем дальше
-						//if (text.error === undefined || text.error === null) {
-							//делаем проверку на существование города. если город существует, то идем дальше.
-							//if (text.no === undefined) {
-								//Получаем последнюю букву города, чтобы следующий начинался на предыдущую
-								//let lastletter = lastLetter(town);
-								//Предварительно очистим слой с метками
-								//if (markersLayer !== undefined) {
-									//markersLayer.clearLayers();
-								//}
-								//Обнулим массив меток
-								//markers = [];
-								//Добавим метку введенного пользователем города
-								//markers.push(
-									//L.marker([text.latitude, text.longitude]).
-									//bindPopup(text.city)
-								//);
-								//делаем запрос к игровому серверу о получении города на последнюю букву введенного города
-								//response = await fetch(`http://city.9pr.ru/lastletter/${lastletter}`);
-								//получаем текст сообщения
-								//text = await response.text();
-								//так как ответ приходит в формате JSON, предварительно отпарсим его
-								//text = JSON.parse(text);
-								//Делаем проверку на ошибки, если поле с ошибкой не пусто, то оповещаем, если нет, идем дальше
-								//if (text.error === undefined || text.error === null) {
-									//Добавим город в множество, чтобы не повторялся и этот город
-									//game1Set.add(text.city);
-									//Добавим и его в массив меток для карты
-									//markers.push(
-										//L.marker([text.latitude, text.longitude]).
-										//bindPopup(text.city)
-									//);
-									//Покажем информацию об обоих городах
-									//document.querySelector('#game1_town2').innerHTML = `
-										//<div>Ваш город: ${town}. <br> Город противника
-											//${text.city}</div>
-									//`;
-									//Для удобства первую букву нового города покажем в лейбле 
-									//document.querySelector('label[for="game1_town"]').textContent = `
-											//Ваш город на ${lastLetter(text.city).toUpperCase()}:
-									//`;
-									//а так же сразу вставим её в поле ввода
-									//document.querySelector('#game1_town').value = 
-										//lastLetter(text.city).toUpperCase();
-									//Добавим метки на карту
-									//markersLayer = L.featureGroup(markers).addTo(map_game1);
-									//Передвинем карту, чтобы обе метки оказались в зоне видимости
-									//map_game1.fitBounds(markersLayer.getBounds());
-								//} else {
-									//Выведем ошибку
-									//document.querySelector('#game1_town1').innerHTML =
-									//'Произошла ошибка, игра окончена.';
-									//console.log('Ошибка: ', text.error);
-								//}
-							//} else {
-								//Выведем ошибку
-								//alert('Такого города не существует');
-							//}
-						//} else {
-							//Выведем ошибку
-							//document.querySelector('#game1_town1').innerHTML =
-							//'Произошла ошибка, игра окончена.';
-							//console.log('Ошибка: ', text.error);
-						//}
-					//}
-				//}
-
-				// Игра 2
-				//Программируем клик по кнопке старт
-				//document.querySelector('#game2_start').onclick = () => {
-					//Скрываем саму кнопку
-					//document.querySelector('#game2_start').style.display = 'none';
-					//Отобразим игровое поле
-					//document.querySelector('#game2_area').style.display = 'block';
-					//Отобразим счет и покажем нулевой счет
-					//document.querySelector('#game2_score').style.display = 'block';
-					//document.querySelector('#game2_score').innerHTML = 'Игрок 0 : 0 Компьютер';
-					//Инициализируем карту
-					//map_game2 = L.map('game2_map').setView([51.478, 0, 0], 13);
-					//Подгрузим тайлы карты и добавим их на карту
-					//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
-					//.addTo(map_game2);
-					//Обнуляем переменную счета на начало игры
-					//score2 = [0, 0];
-				//}
-				//Что бы города не повторялись используем множество. так как в нем все элементы уникальны
-				//const game2Set = new Set();
-				//Програмируем клик отправки города
-				//document.querySelector('#game2_set_result').onclick = async () => {
-					//получаем город из поля
-					//let town = document.querySelector('#game2_town').value;
-					//Делаем проверку, что этот город еще не был введен
-					//if (game2Set.has(town)) {
-						//alert('Данный город уже был');
-					//} else {
-						//Если такого города нет, то добавим его в множество
-						//game2Set.add(town);
-						//делаем запрос к игровому серверу о получении информации о введенном городе
-						//let response = await fetch(`http://city.9pr.ru/city/${town}`);
-						//получаем текст сообщения
-						//let text = await response.text();
-						//так как ответ приходит в формате JSON, предварительно отпарсим его
-						//text = JSON.parse(text);
-						//Делаем проверку на ошибки, если поле с ошибкой не пусто, то оповещаем, если нет, идем дальше
-						//if (text.error === undefined || text.error === null) {
-							//делаем проверку на существование города. если город существует, то идем дальше.
-							//if (text.no === undefined) {
-								//Получаем последнюю букву города, чтобы следующий начинался на предыдущую
-								//let lastletter = lastLetter(town);
-								//Предварительно очистим слой с метками
-								//if (markersLayer2 !== undefined) {
-									//markersLayer2.clearLayers();
-								//}
-								//Обнулим массив меток
-								//markers2 = [];
-								//Если в переменной последних координат есть запись, то считаем ортодрому
-								//между Вашим городом и городом компьютера. Отбрасываем дробную часть и записываем
-								//в счет игрока
-								//if (lastCoord2.length === 2) {
-									//score2[0] += Math.floor(
-										//ortodroma(
-											//text.latitude, text.longitude,
-											//lastCoord2[0], lastCoord2[1]
-										//)
-									//);
-								//}
-								//обновим переменную последних координат
-								//lastCoord2 = [text.latitude, text.longitude];
-								//Добавим метку введенного пользователем города
-								//markers2.push(
-									//L.marker([text.latitude, text.longitude]).
-									//bindPopup(text.city)
-								//);
-								//делаем запрос к игровому серверу о получении города на последнюю букву введенного города
-								//response = await fetch(`http://city.9pr.ru/lastletter/${lastletter}`);
-								//получаем текст сообщения
-								//text = await response.text();
-								//так как ответ приходит в формате JSON, предварительно отпарсим его
-								//text = JSON.parse(text);
-								//Делаем проверку на ошибки, если поле с ошибкой не пусто, то оповещаем, если нет, идем дальше
-								//if (text.error === undefined || text.error === null) {
-									//Добавим город в множество, чтобы не повторялся и этот город
-									//game2Set.add(text.city);
-									//Если в переменной последних координат есть запись, то считаем ортодрому
-									//между Вашим городом и городом компьютера. Отбрасываем дробную часть и записываем
-									//в счет компьютера
-									//if (lastCoord2.length === 2) {
-										//score2[1] += Math.floor(
-											//ortodroma(
-												//text.latitude, text.longitude,
-												//lastCoord2[0], lastCoord2[1]
-											//)
-										//);
-									//}
-									//обновим переменную последних координат
-									//lastCoord2 = [text.latitude, text.longitude];
-									//Добавим и его в массив меток для карты
-									//markers2.push(
-										//L.marker([text.latitude, text.longitude]).
-										//bindPopup(text.city)
-									//);
-									//Покажем информацию об обоих городах
-									//document.querySelector('#game2_town2').innerHTML = `
-										//<div>Ваш город: ${town}. <br> Город противника
-											//${text.city}</div>
-									//`;
-									//Для удобства первую букву нового города покажем в лейбле 
-									//document.querySelector('label[for="game2_town"]').textContent = `
-											//Ваш город на ${lastLetter(text.city).toUpperCase()}:
-									//`;
-									//а так же сразу вставим её в поле ввода
-									//document.querySelector('#game2_town').value = 
-										//lastLetter(text.city).toUpperCase();
-									//Добавим метки на карту
-									//markersLayer2 = L.featureGroup(markers2).addTo(map_game2);
-									//Передвинем карту, чтобы обе метки оказались в зоне видимости
-									//map_game2.fitBounds(markersLayer2.getBounds());
-									//Выведем счет на экран по принципу. Разница между ведущим игроком
-									// и отстающим у ведущего и 0 у отстающего всегда. Это сделано, чтобы 
-									// не перегружать экран большими числами
-									//document.querySelector('#game2_score').innerHTML =
-									//score2[0] >= score2[1] ?
-									//`<b>Игрок</b> ${score2[0]-score2[1]} : 0 Компьютер` :
-									//`Игрок 0 : ${score2[1]-score2[0]} Компьютер`
-								//} else {
-									//Выведем ошибку
-									//document.querySelector('#game2_town2').innerHTML =
-									//'Произошла ошибка, игра окончена.';
-									//console.log('Ошибка: ', text.error);
-								//}
-							//} else {
-								//Выведем ошибку
-								//alert('Такого города не существует');
-							//}
-						//} else {
-							//Выведем ошибку
-							//document.querySelector('#game2_town2').innerHTML =
-							//'Произошла ошибка, игра окончена.';
-							//console.log('Ошибка: ', text.error);
-						//}
-					//}
-				//}
-
-				//3игра
-				//Что бы города не повторялись используем множество. так как в нем все элементы уникальны
-				//game3Set = new Set();
-				//Программируем клик по кнопке старт
-				//document.querySelector('#game3_start').onclick = () => {
-					//Если сокеты игрового сервера не прогрузились, то играть бессмысленно, выдаем ошибку.
-					//В противном случае подключаемся к игровому серверу.
-					//if (typeof io !== 'undefined') {
-						//Подключаемся к сокетам игрового сервера
-						//socket = io("http://city.9pr.ru");
-						//Все события сокетов проводим внутри этого блока
-						//socket.on("connect", () => {
-							//сокет ожидания игрока. Как только к игре кто-то присоеденился, то мы получим этот сокет
-							//socket.on('wait', (body) => {
-								//room = body.room;
-								//Object.keys(body.gamers).forEach(gamePlayer => {
-									//if (name !== gamePlayer) {
-										//opponent = gamePlayer;
-										//whoGo = body.gamers[gamePlayer][1];
-										//document.querySelector('#game3_waiting').innerHTML = `К игре присоеденился: ${gamePlayer}. Ожидайте начала игры.`;
-										//setTimeout(() => {
-											//document.querySelector('#game3_button_start').style.display = 'none';
-											//document.querySelector('#game3_area').style.display = 'none';
-											//document.querySelector('#game3_waiting').style.display = 'none';
-											//document.querySelector('#game3_score').style.display = 'block';
-											//document.querySelector('#game3_score').innerHTML = `"${name}" 0 : 0 "${opponent}"`;
-											//map_game3 = L.map('game3_map').setView([51.478, 0, 0], 13);
-											//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map_game3);
-											//score3 = [0,0];
-											//if (whoGo == 1) {
-												//document.querySelector('#game3_waiting').style.display = 'block';
-												//document.querySelector('#game3_waiting').innerHTML = 'Подождите, пока Ваш оппонент сделает ход.';
-											//} else {
-												//document.querySelector('#game3_area').style.display = 'block';
-											//}
-										//}, 3000);
-									//}
-								//});
-							//});
-							//socket.on('getCity', (body) => {
-								//score3 = body.score;
-								//if (score3[whoGo] > score3[(whoGo+1)%2]) {
-									//document.querySelector('#game3_score').innerHTML = 
-										//`<p><b>"${name}" ${score3[whoGo]}</b> : ${score3[(whoGo+1)%2]} "${opponent}"</p>`;
-								//} else if (score3[whoGo] < score3[(whoGo+1)%2]) {
-									//document.querySelector('#game3_score').innerHTML = 
-										//`<p>"${name}" ${score3[whoGo]} : <b>${score3[(whoGo+1)%2]} "${opponent}"</b></p>`;
-								//} else {
-									//document.querySelector('#game3_score').innerHTML = 
-										//`<p>"${name}" 0 : 0 "${opponent}"</p>`;
-								//}
-								//if (body.name === opponent) {
-									//if (markersLayer3 !== undefined) {
-										//markersLayer3.clearLayers();
-									//}
-									//game3Set.add(body.city.city);
-									//lastCoord3 = [body.city.latitude, body.city.longitude];
-									//markers3.push(L.marker([body.city.latitude, body.city.longitude]).bindPopup(body.city.city));
-									//if (markers3.length > 2) {
-										//markers3.shift();
-									//}
-									//markersLayer3 = L.featureGroup(markers3).addTo(map_game3);
-									//map_game3.fitBounds(markersLayer3.getBounds());
-									//document.querySelector('#game3_area').style.display = 'block';
-									//document.querySelector('#game3_waiting').style.display = 'none';
-									//let lastletter2 = lastLetter(body.city.city);
-									//document.querySelector('#game3_town').value = lastletter2.toUpperCase();
-									//document.querySelector('label[for="game3_town"]').textContent = `Ваш город на ${lastletter2.toUpperCase()}:`;
-								//}
-							//});
-							
-							//socket.on('error', (body) => {
-								//if (body.type === 'pre_game') {
-									//document.querySelector('#game3_start').style.display = 'inline';
-									//document.querySelector('#game3_waiting').style.display = 'none';
-									//alert(body.text);
-								//} else if (body.type === 'in_game') {
-									//document.querySelector('#game3_area').style.display = 'inline';
-									//document.querySelector('#game3_waiting').style.display = 'none';
-									//if (markersLayer3 !== undefined) {
-										//markersLayer3.clearLayers();
-									//}
-									//markersLayer3 = L.featureGroup(markersCopy).addTo(map_game3);
-									//map_game3.fitBounds(markersLayer3.getBounds());
-									//game3Set.delete($('#game3_town').value);
-									//alert(body.text);
-								//}
-							//});
-							//socket.on('exit', (data) => {
-								//document.querySelector('#game3_area').style.display = 'none';
-								//document.querySelector('#game3_score').style.display = 'none';
-								//document.querySelector('#game3_map').style.display = 'none';
-								//document.querySelector('#game3_waiting').style.display = 'block';
-								//document.querySelector('#game3_waiting').innerHTML = `
-									//<p>К сожалению ${data.name} покинул игру. Игра окончена.</p>
-									//<p>Счет игры "${name}" ${score3[whoGo]} : ${score3[(whoGo+1)%2]} "${opponent}"</p>
-								//`;
-								//document.querySelector('#game3_start').style.display = 'block';
-								//game3Set.clear();
-							//});
-							//socket.on("disconnect", (reason) => {
-								//document.querySelector('#game3_area').style.display = 'none';
-								//document.querySelector('#game3_score').style.display = 'none';
-								//document.querySelector('#game3_map').style.display = 'none';
-								//document.querySelector('#game3_waiting').style.display = 'block';
-								//document.querySelector('#game3_waiting').innerHTML = `
-									//<p>К сожалению соединение с сервером потеряно. Игра окончена.</p>
-									//<p>Счет игры "${name}" ${score3[whoGo]} : ${score3[(whoGo+1)%2]} "${opponent}"</p>
-									//Для старта новой игры - обновите страницу.`;
-								//game3Set.clear();
-							//});
-						//});
-
-						//document.querySelector('#game3_start').style.display = 'none';
-						//document.querySelector('#game3_waiting').style.display = 'block';
-						//name = document.querySelector('#game3_name').value;
-						//document.querySelector('#game3_waiting').innerHTML = `<p>Ожидайте игрока</p>`;
-						//socket.emit('start', name);
-					//} else {
-						//alert('Соединение с сервером отсутствует, попробуйте начать игру позднее, перезагрузив страницу.');
-					//}
-				//};
-				//document.querySelector('#game3_set_result').onclick = async () => {
-					//let town = document.querySelector('#game3_town').value;
-					//if (game3Set.has(town)) {
-					//	alert('Данный город уже был');
-					//} else {
-						//game3Set.add(town);
-						//let response = await fetch(`http://city.9pr.ru/city/${town}`);
-						//let text = await response.text();
-						//text = JSON.parse(text);
-						//if (text.error === undefined || text.error === null) {
-							//if (text.no === undefined) {
-								//if (markersLayer3 !== undefined) {
-									//markersLayer3.clearLayers();
-								//}
-								
-								//if (lastCoord3.length === 2) {
-									//score3[whoGo] += Math.floor(ortodroma (text.latitude, text.longitude, lastCoord3[0], lastCoord3[1]));
-								//}
-								//lastCoord3 = [text.latitude, text.longitude];
-								//markersCopy = Object.values(markers3);
-								//markers3.push(L.marker([text.latitude, text.longitude]).bindPopup(text.city));
-								//if (markers3.length > 2) {
-								//	markers3.shift();
-								//}
-								//markersLayer3 = L.featureGroup(markers3).addTo(map_game3);
-								//map_game3.fitBounds(markersLayer3.getBounds());
-								//socket.emit('sendCity', {
-									//score: score3,
-									//name,
-									//room,
-									//city: text,
-								//});
-								//document.querySelector('#game3_button_start').style.display = 'none';
-								//document.querySelector('#game3_area').style.display = 'none';
-								//document.querySelector('#game3_waiting').innerHTML = 'Подождите, пока Ваш оппонент сделает ход.';
-								//document.querySelector('#game3_waiting').style.display = 'block';
-							//} else {
-								//alert(text.no);
-							//}
-						//} else {
-							//document.querySelector('#game3_town2').innerHTML = `
-								//<p>Произошла ошибка, игра окончена.</p>
-							//`;
-							//document.querySelector('#game3_set_result').style.display = 'none';
-							//console.log('Ошибка: ', text.error);
-						//}
-					//}
-				//};
-		
-			}
-
-			//function ortodroma (latA, lonA, latB, lonB) {
-				//return 6372795 * Math.acos (
-					//Math.cos(deg2rad(latB)) * Math.cos(deg2rad(latA)) *
-					//Math.cos(deg2rad(lonA) - deg2rad(lonB)) + 
-					//Math.sin(deg2rad(latB)) * Math.sin(deg2rad(latA))
-				//);
-			//}
-
-			//function deg2rad (degree) {
-				//return Math.PI * degree / 180;
-			//}
-
-			//function trigonometry(months, days) {
-				//let table = '<table><thead>';
-				//table += '<tr>';
-				//for (let month of months) {
-					//table += `<td>${month}</td>`;
-				//}
-				//table += '</tr><thead><tbody>';
-				//for (let month of months) {
-				//	table += '<tr>';
-				//	for (let day of days) {
-				//		c = day;
-				//		table += `<td>${c}</td>`;
-				//	}
-				//	table += '</tr>';
-				//}
-				//table += '</tbody></table>';
-				//document.querySelector('#table').innerHTML = table;
-			//}
-
-
-			//Название месяцев
-			let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль',
-			'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-			//Количество дней с января и до ноября включительно, первый элемент 0
-			let days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-			//Запускаем функцию генерирующую таблицу
-			daysTable(months, days);
 			
-			function daysTable(months, days) {
-				let table = '<table><thead>';
-				//Заполняем 1 строчку
-				table += '<tr>';
-				for (let month of months) {
-					table += `<td>${month}</td>`;
-				}
-				table += '</tr><thead><tbody>';	
-				//Заполняем саму таблицу
-				//В месяце не больше 31 дней, поэтому используем генератор интервала от 0 до 31
-				for (let day of [...Array(31).keys()]) {
+				function daysTable(months, days) {
+					let table = '<table><thead>';
+					//Заполняем 1 строчку
 					table += '<tr>';
-					//В каждом месяце по формуле записываем порядковый номер месяца
-					for (let month in months) {
-					let currentDay = 1 + day + month * days[month];
-							table += `<td>${currentDay}</td>`;
-							
+					for (let month of months) {
+						table += `<td>${month}</td>`;
 					}
-					table += '</tr>';
-				}
-				if (days == 31){
-					document.querySelector('#table').innerHTML = "-";	
-				}
-				table += '</tbody></table>';
-				document.querySelector('#table').innerHTML = table;			
-			}
+					table += '</tr><thead><tbody>';	
+					//Заполняем саму таблицу
+					//В месяце не больше 31 дней, поэтому используем генератор интервала от 0 до 31
+					for (let day of [...Array(31).keys()]) {
+						table += '<tr>';
+						//В каждом месяце по формуле записываем порядковый номер месяца
+						for (let month in months) {
+							let currentDay = 1 + day + days2[+month];
+							if (day+1 > days[+month+1]) {
+								table += `<td>-</td>`;
+							}
+							else {
+								table += `<td>${currentDay}</td>`;
+							}	
+						}
+						table += '</tr>';
+					}
+					
+					table += '</tbody></table>';
+					document.querySelector('#table').innerHTML = table;	
+				
+				//Подсчет кредита по всем 3 практикам на срок от 30 дней до 10 лет по 
+				//простым и сложным процентным ставкам.
+				//Предпринимателю 14 февраля была предоставлена ссуда в размере 20 тыс. руб. с 
+				//погашением 14 июля того же года под процентную ставку 30% годовых. Рассчитайте 
+				//различными способами сумму к погашению, если начисляются простые проценты и год 
+				//невисокосный.
+				
 
-			//function lastLetter (town) {
-				//let lastletter;
-				//for (let i = -1; i > -town.length; i--) {
-					//lastletter = town.substr(i, 1);
-					//if (['ь', 'ъ', 'ы'].indexOf(lastletter) === -1) {
-						//break;
-					//}
-				//}
-				//return lastletter;
-			//}
+				// let data1 = new Date('February 14, 00:00:00');
+				// let data2 = new Date('July 14, 00:00:00');
+				// let percent = '0.3'; // 30%
+				// let summ = '20000';
+				//
+				// //Функция на расчёт ссуды
+				// function loan(){
+				// data1 = '150'; //February 14
+				// data2 = '365'; // July 14
+				// let finish = summ*(1 + percent * (data1/data2)); //расчёт
+				//
+				// if (finish > summ){ //проверка
+				// 		document.querySelector('#Finish').innerHTML = Math.ceil(finish)
+				// } else if (finish < summ){ //иначе
+				//      document.querySelector('#Finish').innerHTML = 'Получается что косяк'
+				// }
+				//
+				// }
+				// loan()
+
+				function fun1() {
+
+    				let rng=document.getElementById('r1'); //rng - это ползунок
+    				let i1=document.getElementById('i1'); // i1 - input
+    				i1.value=rng.value;
+				}
+				//p - сумма первичная
+				//i - процент
+				//s - конечная сумма
+				//I - доход
+				//n - срок (t/k)
+				let n = document.getElementById('r1');
+				let i = document.getElementById('proch');
+				let p = document.getElementById('summ');
+
+				function RasPr(){
+
+					let AnglNar = p.value * (1 + n.value/365 * i.value)
+					let NemNar = p.value * (1 + n.value/360 * i.value)
+					let HrasNar = p.value * (1 + n.value/360 * i.value)
+    				document.querySelector('#AN1').innerHTML = Math.ceil(AnglNar);
+    				document.querySelector('#NEM1').innerHTML = Math.ceil(NemNar);
+    				document.querySelector('#HR1').innerHTML = Math.ceil(HrasNar);
+
+					// alert(Math.ceil(AnglNar))
+					
+					let AnglDis = AnglNar / (1 + n.value/365 * i.value);
+					let NemDis = NemNar / (1 + n.value/365 * i.value);
+					let HraslDis = HrasNar / (1 + n.value/365 * i.value);
+    				document.querySelector('#AN2').innerHTML = Math.ceil(AnglDis);
+    				document.querySelector('#NEM2').innerHTML = Math.ceil(NemDis);
+    				document.querySelector('#HR2').innerHTML = Math.ceil(HraslDis);
+				}
+				
+				function RasHard(){
+
+    				//Math.pow - (base, exponent)
+    				//base — число, которое возводится в степень (X)
+    				//exponent — степень, в которую нужно возвести (Y)
+    				let AnglNarHard = p.value * (Math.pow(1 + i.value, n.value/365))
+    				let NemNarHard = p.value * (Math.pow(1 + i.value, n.value/360))
+    				let HrasNarHard = p.value * (Math.pow(1 + i.value, n.value/360))
+    				document.querySelector('#ANHard1').innerHTML = Math.ceil(AnglNarHard);
+					document.querySelector('#NEMHard1').innerHTML = Math.ceil(NemNarHard);
+    				document.querySelector('#HRHard1').innerHTML = Math.ceil(HrasNarHard);
+					
+					let AnglDisHard = AnglNarHard / (Math.pow(1 + i.value, n.value/365));
+    				let NemDisHard = NemNarHard / (Math.pow(1 + i.value, n.value/360));
+    				let HraslDisHard = HrasNarHard / (Math.pow(1 + i.value, n.value/360));
+    				document.querySelector('#ANHard2').innerHTML = Math.ceil(AnglDisHard);
+   					document.querySelector('#NEMHard2').innerHTML = Math.ceil(NemDisHard);
+   					document.querySelector('#HRHard2').innerHTML = Math.ceil(HraslDisHard);
+				}
+
+
+
+			}
+		}
 		</script>
 	</body>
 </html>
