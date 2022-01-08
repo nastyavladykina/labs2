@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html>
 	<head>
@@ -958,19 +959,7 @@
 				<section
 				data-background-image="image/13.jpg"
 				data-menu-title="Учебник"
-				></section> 
-				
-
-				<!-- Блок для исходных кодов-->
-				<section class="center" data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						Исходный код программ
-						----
-
-						Note:
-
-					</script>
-				</section>
+				></section>
 
 				<section>
 					<h3>Таблица порядковые номера дней в обычном году</h3>
@@ -981,75 +970,207 @@
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
 						
-						<h4>Подсчет кредита по всем $3$ практикам на срок от $30$ дней до $10$ лет по 
-						простым и сложным процентным ставкам</h4>
-
-						<div class="col-md-7 col-lg-8">
-							<h4 class="mb-3"><ya-tr-span data-index="14-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Billing address" data-translation="Платежный адрес" data-type="trSpan">Даты погашения</ya-tr-span></h4>
-							<div class="py-5 text-center">
-								<h2><ya-tr-span data-index="0-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Checkout form" data-translation="Форма оформления заказа" data-type="trSpan">
-									<table class="table">
-									<thead >
-									<p class="text-center text-muted"><ya-tr-span data-index="12-0" data-translated="true" 
-										data-source-lang="en" data-target-lang="ru" data-value="" data-translation="© 2021 Компания, 
-										Inc" data-type="trSpan">ПРОСТАЯ ПРОЦЕНТНАЯ СТАВКА:</ya-tr-span></p>
-									<tr>
-										<th scope="col"></th>
-										<th scope="col">Наращения</th>
-										<th scope="col">Дисконтирование</th>
-									</tr>
-									</thead>
-									<tbody>
-									<tr>
-										<th scope="row">Английская</th>
-										<td id="AN1"></td>
-										<td id="AN2"></td>
-									</tr>
-									<tr>
-										<th scope="row">Немецкая </th>
-										<td id="NEM1"></td>
-										<td id="NEM2"></td>
-									</tr>
-									<tr>
-										<th scope="row">французская</th>
-										<td id="HR1"></td>
-										<td id="HR2"></td>
-									</tr>
-									</tbody>
-								</table>
-									<br>
-									<table class="table">
-										<thead >
-										<p class="text-center text-muted"><ya-tr-span data-index="12-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="" data-translation="© 2021 Компания, Inc" data-type="trSpan">СЛОЖНАЯ ПРОЦЕНТНАЯ СТАВКА:</ya-tr-span></p>
-										<tr>
-											<th scope="col"></th>
-											<th scope="col">Наращения</th>
-											<th scope="col">Дисконтирование</th>
-										</tr>
-										</thead>
-										<tbody>
-										<tr>
-											<th scope="row">Английская</th>
-											<td id="ANHard1"></td>
-											<td id="ANHard2"></td>
-										</tr>
-										<tr>
-											<th scope="row">Немецкая </th>
-											<td id="NEMHard1"></td>
-											<td id="NEMHard2"></td>
-										</tr>
-										<tr>
-											<th scope="row">французская</th>
-											<td id="HRHard1"></td>
-											<td id="HRHard2"></td>
-										</tr>
-										</tbody>
-									</table></ya-tr-span></h2>
-			
-							</div>
-						</div> 
+						#### Подсчет кредита по всем $3$ практикам на срок от $30$ дней до $10$ лет по 
+						#### **простой процентной ставке**
 					</script>
 				</section>
+
+				<section>
+					<h5>Игра 1.</h5>
+					<div class="row g-5">
+						<div class="col-md-5 col-lg-4 order-md-last">
+							
+							<ul class="list-group mb-3">
+								<form action="" onsubmit="return false;">
+									<li class="list-group-item d-flex justify-content-between lh-sm">
+										<div>
+											<h7 class="my-0"><span data-index="3-0" data-translated="true" data-source-lang="en" 
+											data-target-lang="ru" data-value="Product name" data-translation="Первая дата" 
+											data-type="trSpan">На сколько дней?</span></h7>
+											<span class="text-muted"><input type="range" value="30" min="30" max="3652" id="r1" 
+											oninput="Tabl1().fun1()">
+											<input class="inPut" style="width: 60px" id="i1" >дней</span>
+											
+										</div>
+										
+									</li>
+									<li class="list-group-item d-flex justify-content-between lh-sm">
+										<div>
+											<h7 class="my-0"><span data-index="7-0" data-translated="true" data-source-lang="en" 
+											data-target-lang="ru" data-value="Third item" data-translation="Ваш годовой проецнт" 
+											data-type="trSpan">Ваш годовой процент</span></h7>
+											<span class="text-muted"><input class="inPut" id="proch" style="width: 60px" >%</span>
+										</div>
+										
+									</li>
+									<li class="list-group-item d-flex justify-content-between bg-light">
+										<div class="text-success">
+											<h7 class="my-0"><span data-index="9-0" data-translated="true" data-source-lang="en" 
+											data-target-lang="ru" data-value="Promo code" data-translation="Одобренная сумма" 
+											data-type="trSpan">Введите сумму</span></h7>
+											<span class="text-success"><span data-index="11-0" data-translated="true" 
+											data-source-lang="en" data-target-lang="ru" data-value="−$5" data-translation="−$5" 
+											data-type="trSpan"><input type="text" id="summ" style="width: 100px" ></span></span>
+										</div>
+										
+									</li>
+									<li class="list-group-item d-flex justify-content-between lh-sm">
+										<div>
+											<h7 class="my-0"><span data-index="7-0" data-translated="true" 
+											data-source-lang="en" data-target-lang="ru" data-value="Third item" 
+											data-translation="Третий пункт" data-type="trSpan">Рассчёт</span></h7>
+											<span class="text-muted"><button type="submit" id="button1" class="btn btn-outline-success" >Рассчитать</button></span>
+										</div>
+										
+									</li>
+								</form>
+								
+							</ul>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<div class="py-5 text-center">
+								<h7>
+									
+									<table class="table">
+										<thead >
+											<tr>
+												<th scope="col"></th>
+												<th scope="col">Наращение</th>
+												<th scope="col">Дисконтирование</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">Английская</th>
+												<td id="AN1"></td>
+												<td id="AN2"></td>
+											</tr>
+											<tr>
+												<th scope="row">Немецкая </th>
+												<td id="NEM1"></td>
+												<td id="NEM2"></td>
+											</tr>
+											<tr>
+												<th scope="row">Французская</th>
+												<td id="HR1"></td>
+												<td id="HR2"></td>
+											</tr>
+										</tbody>
+									</table>
+								</h7>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						
+						#### Подсчет кредита по всем $3$ практикам на срок от $30$ дней до $10$ лет по 
+						#### **сложной процентной ставке**
+					</script>
+				</section>
+
+				<section>
+					<h5>Игра 2.</h5>
+					<div class="row g-5">
+						<div class="col-md-5 col-lg-4 order-md-last">
+							
+							<ul class="list-group mb-3">
+								<form action="" onsubmit="return false;">
+									<li class="list-group-item d-flex justify-content-between lh-sm">
+										<div>
+											<h7 class="my-0"><span data-index="3-0" data-translated="true" data-source-lang="en" 
+											data-target-lang="ru" data-value="Product name" data-translation="Первая дата" 
+											data-type="trSpan">На сколько дней?</span></h7>
+											<span class="text-muted"><input type="range" value="30" min="30" max="3652" id="r12" 
+											oninput="Tabl2().fun1()">
+											<input class="inPut" style="width: 60px" id="i12" >дней</span>
+											
+										</div>
+										
+									</li>
+									<li class="list-group-item d-flex justify-content-between lh-sm">
+										<div>
+											<h7 class="my-0"><span data-index="7-0" data-translated="true" data-source-lang="en" 
+											data-target-lang="ru" data-value="Third item" data-translation="Ваш годовой проецнт" 
+											data-type="trSpan">Ваш годовой процент</span></h7>
+											<span class="text-muted"><input class="inPut" id="proch2" style="width: 60px">%</span>
+										</div>
+										
+									</li>
+									<li class="list-group-item d-flex justify-content-between bg-light">
+										<div class="text-success">
+											<h7 class="my-0"><span data-index="9-0" data-translated="true" data-source-lang="en" 
+											data-target-lang="ru" data-value="Promo code" data-translation="Одобренная сумма" 
+											data-type="trSpan">Введите сумму</span></h7>
+											<span class="text-success"><span data-index="11-0" data-translated="true" 
+											data-source-lang="en" data-target-lang="ru" data-value="−$5" data-translation="−$5" 
+											data-type="trSpan"><input type="text" id="summ2" style="width: 100px"></span></span>
+										</div>
+										
+									</li>
+									<li class="list-group-item d-flex justify-content-between lh-sm">
+										<div>
+											<h7 class="my-0"><span data-index="7-0" data-translated="true" 
+											data-source-lang="en" data-target-lang="ru" data-value="Third item" 
+											data-translation="Третий пункт" data-type="trSpan">Рассчёт</span></h7>
+											<span class="text-muted" ><button type="submit" id="button2" class="btn btn-outline-success" onclick="return false">Рассчитать</button></span>
+										</div>
+										
+									</li>
+								</form>
+			
+							</ul>
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<div class="py-5 text-center">
+								<h7>
+									<br>
+									<table class="table">
+										<thead>
+											<tr>
+												<th scope="col"></th>
+												<th scope="col">Наращение</th>
+												<th scope="col">Дисконтирование</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">Английская</th>
+												<td id="ANHard1"></td>
+												<td id="ANHard2"></td>
+											</tr>
+											<tr>
+												<th scope="row">Немецкая </th>
+												<td id="NEMHard1"></td>
+												<td id="NEMHard2"></td>
+											</tr>
+											<tr>
+												<th scope="row">Французская</th>
+												<td id="HRHard1"></td>
+												<td id="HRHard2"></td>
+											</tr>
+										</tbody>
+									</table>
+								</h7>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="center" data-markdown data-separator-notes="^Note:" data-menu-title="Заключительный слайд">
+					<script type="text/template">
+						Спасибо за внимание
+					</script>
+					<span class="offscreen">
+						Конец презентации
+					</span>
+				</section>
+
+
+						
 
 				
 
@@ -1144,93 +1265,113 @@
 					
 					table += '</tbody></table>';
 					document.querySelector('#table').innerHTML = table;	
-				
-				//Подсчет кредита по всем 3 практикам на срок от 30 дней до 10 лет по 
-				//простым и сложным процентным ставкам.
-				//Предпринимателю 14 февраля была предоставлена ссуда в размере 20 тыс. руб. с 
-				//погашением 14 июля того же года под процентную ставку 30% годовых. Рассчитайте 
-				//различными способами сумму к погашению, если начисляются простые проценты и год 
-				//невисокосный.
-				
-
-				// let data1 = new Date('February 14, 00:00:00');
-				// let data2 = new Date('July 14, 00:00:00');
-				// let percent = '0.3'; // 30%
-				// let summ = '20000';
-				//
-				// //Функция на расчёт ссуды
-				// function loan(){
-				// data1 = '150'; //February 14
-				// data2 = '365'; // July 14
-				// let finish = summ*(1 + percent * (data1/data2)); //расчёт
-				//
-				// if (finish > summ){ //проверка
-				// 		document.querySelector('#Finish').innerHTML = Math.ceil(finish)
-				// } else if (finish < summ){ //иначе
-				//      document.querySelector('#Finish').innerHTML = 'Получается что косяк'
-				// }
-				//
-				// }
-				// loan()
-
-				function fun1() {
-
-    				let rng=document.getElementById('r1'); //rng - это ползунок
-    				let i1=document.getElementById('i1'); // i1 - input
-    				i1.value=rng.value;
-				}
-				//p - сумма первичная
-				//i - процент
-				//s - конечная сумма
-				//I - доход
-				//n - срок (t/k)
-				let n = document.getElementById('r1');
-				let i = document.getElementById('proch');
-				let p = document.getElementById('summ');
-
-				function RasPr(){
-
-					let AnglNar = p.value * (1 + n.value/365 * i.value)
-					let NemNar = p.value * (1 + n.value/360 * i.value)
-					let HrasNar = p.value * (1 + n.value/360 * i.value)
-    				document.querySelector('#AN1').innerHTML = Math.ceil(AnglNar);
-    				document.querySelector('#NEM1').innerHTML = Math.ceil(NemNar);
-    				document.querySelector('#HR1').innerHTML = Math.ceil(HrasNar);
-
-					// alert(Math.ceil(AnglNar))
 					
-					let AnglDis = AnglNar / (1 + n.value/365 * i.value);
-					let NemDis = NemNar / (1 + n.value/365 * i.value);
-					let HraslDis = HrasNar / (1 + n.value/365 * i.value);
-    				document.querySelector('#AN2').innerHTML = Math.ceil(AnglDis);
-    				document.querySelector('#NEM2').innerHTML = Math.ceil(NemDis);
-    				document.querySelector('#HR2').innerHTML = Math.ceil(HraslDis);
-				}
-				
-				function RasHard(){
-
-    				//Math.pow - (base, exponent)
-    				//base — число, которое возводится в степень (X)
-    				//exponent — степень, в которую нужно возвести (Y)
-    				let AnglNarHard = p.value * (Math.pow(1 + i.value, n.value/365))
-    				let NemNarHard = p.value * (Math.pow(1 + i.value, n.value/360))
-    				let HrasNarHard = p.value * (Math.pow(1 + i.value, n.value/360))
-    				document.querySelector('#ANHard1').innerHTML = Math.ceil(AnglNarHard);
-					document.querySelector('#NEMHard1').innerHTML = Math.ceil(NemNarHard);
-    				document.querySelector('#HRHard1').innerHTML = Math.ceil(HrasNarHard);
 					
-					let AnglDisHard = AnglNarHard / (Math.pow(1 + i.value, n.value/365));
-    				let NemDisHard = NemNarHard / (Math.pow(1 + i.value, n.value/360));
-    				let HraslDisHard = HrasNarHard / (Math.pow(1 + i.value, n.value/360));
-    				document.querySelector('#ANHard2').innerHTML = Math.ceil(AnglDisHard);
-   					document.querySelector('#NEMHard2').innerHTML = Math.ceil(NemDisHard);
-   					document.querySelector('#HRHard2').innerHTML = Math.ceil(HraslDisHard);
 				}
+			
+				
+			}	
+			
+		</script>
+		<!-- Расчёт ------------------------------------------------------------------------------------------------------------------------- -->
+		<script>
+			
+		 function Tabl1(){
+				 function fun1() {
+						let rng=document.getElementById('r1'); //rng - это ползунок
+    					let i1=document.getElementById('i1'); // i1 - input
+    					i1.value=rng.value;
+					}
+					
+				
+					//p - сумма первичная
+					//i - процент
+					//s - конечная сумма
+					//I - доход
+					//n - срок (t/k)
+					let t = document.getElementById('r1');
+					let i = document.getElementById('proch');
+					let p = document.getElementById('summ');
+					
+				 function RasPr(){
+					 if(t.value <= 0 || i.value  <= 0 || p.value  <= 0){
+						 alert('Что-то не заполнено')
+					 }else{
+						//  Наращение--------------------------------------------------------
+						let AnglNar = p.value * (1 + t.value/365 * i.value)
+						let NemNar = p.value * (1 + t.value/360 * i.value)
+						let HrasNar = p.value * (1 + t.value/360 * i.value)
+    					document.querySelector('#AN1').innerHTML = Math.ceil(AnglNar);
+    					document.querySelector('#NEM1').innerHTML = Math.ceil(NemNar);
+    					document.querySelector('#HR1').innerHTML = Math.ceil(HrasNar);
+						// Дисконтирование---------------------------------------------------
+						let AnglDis = AnglNar / (1 + t.value/365 * i.value);
+						let NemDis = NemNar / (1 + t.value/360 * i.value);
+						let HraslDis = HrasNar / (1 + t.value/360 * i.value);
+    					document.querySelector('#AN2').innerHTML = Math.ceil(AnglDis);
+    					document.querySelector('#NEM2').innerHTML = Math.ceil(NemDis);
+    					document.querySelector('#HR2').innerHTML = Math.ceil(HraslDis);
+					 }
+				
+					}
+				
+					fun1()
 
-
-
+				document.querySelector('#button1').onclick  = function(){
+					RasPr()
+					}
 			}
-		}
+			Tabl1()
+			function Tabl2(){
+				function fun1() {
+						let rng=document.getElementById('r12'); //rng - это ползунок
+    					let i1=document.getElementById('i12'); // i1 - input
+    					i1.value=rng.value;
+					}
+					
+				
+					//p - сумма первичная
+					//i - процент
+					//s - конечная сумма
+					//I - доход
+					//n - срок (t/k)
+					let t = document.getElementById('r12');
+					let i = document.getElementById('proch2');
+					let p = document.getElementById('summ2');
+				
+					
+				 function disHard(){
+					if(t.value <= 0 || i.value  <= 0 || p.value  <= 0){
+						 alert('Что-то не заполнено')
+					 }else{
+    					//Math.pow - (base, exponent)
+    					//base — число, которое возводится в степень (X)
+    					//exponent — степень, в которую нужно возвести (Y)
+
+						//  Наращение--------------------------------------------------------
+    					let AnglNarHard = p.value * (Math.pow(1 + i.value, t.value/365))
+    					let NemNarHard = p.value * (Math.pow(1 + i.value, t.value/360))
+    					let HrasNarHard = p.value * (Math.pow(1 + i.value, t.value/360))
+    					document.querySelector('#ANHard1').innerHTML = Math.ceil(AnglNarHard);
+						document.querySelector('#NEMHard1').innerHTML = Math.ceil(NemNarHard);
+    					document.querySelector('#HRHard1').innerHTML = Math.ceil(HrasNarHard);
+					// Дисконтирование---------------------------------------------------
+						let AnglDisHard = AnglNarHard / (Math.pow(1 + i.value, t.value/365));
+    					let NemDisHard = NemNarHard / (Math.pow(1 + i.value, t.value/360));
+    					let HraslDisHard = HrasNarHard / (Math.pow(1 + i.value, t.value/360));
+    					document.querySelector('#ANHard2').innerHTML = Math.ceil(AnglDisHard);
+   						document.querySelector('#NEMHard2').innerHTML = Math.ceil(NemDisHard);
+   						document.querySelector('#HRHard2').innerHTML = Math.ceil(HraslDisHard);
+					 }
+					}
+					fun1()
+
+				document.querySelector('#button2').onclick  = function(){
+					disHard()
+					}
+			}
+			Tabl2()
+
 		</script>
 	</body>
 </html>
