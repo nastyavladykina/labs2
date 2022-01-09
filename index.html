@@ -455,7 +455,7 @@
 
 						**Дано**: 
 						$P = 20000$ руб.;  
-						$i = 0,3$;  
+						$i = 0.3$;  
 						$k_1 = 365$;  
 						$k_2 = 360$;  
 						$k_3 = 360$;  
@@ -483,7 +483,7 @@
 						
 						$n_1 = \tfrac{195-45}{365} = \tfrac{150}{365}$;   
 
-						$S = 20000(1+\tfrac{150}{365}\cdot 0,3) = 22466$ руб.
+						$S = 20000(1+\tfrac{150}{365}\cdot 0.3) = 22466$ руб.
 
 						Note:
 
@@ -500,7 +500,7 @@
 
 						$n_1 = \tfrac{195-45}{360} = \tfrac{150}{360}$;    
 
-						$S = 20000(1+\tfrac{150}{360}\cdot 0,3) = 22500$ руб. 
+						$S = 20000(1+\tfrac{150}{360}\cdot 0.3) = 22500$ руб. 
 
 						Note:
 
@@ -517,7 +517,7 @@
 
 						$n_1 = \tfrac{195-45}{360} = \tfrac{150}{360}$;    
 
-						$S = 20000(1+\tfrac{150}{360}\cdot 0,3) = 22500$ руб.
+						$S = 20000(1+\tfrac{150}{360}\cdot 0.3) = 22500$ руб.
 
 						Note:
 
@@ -549,7 +549,7 @@
 						$P = 10000$ руб.;   
 						$S = 15000$;  
 						$k = 365$;  
-						$i = 0,1$ дней.  
+						$i = 0.1$.  
 
 						**Найти**: $t=?$. 
 						
@@ -568,7 +568,7 @@
 
 						$t = \tfrac{S - P}{Pi}\cdot k$;  
 						
-						$t = \tfrac{15000 - 10000}{10000\cdot 0,1}\cdot 365 = 1825$ руб.;
+						$t = \tfrac{15000 - 10000}{10000\cdot 0.1}\cdot 365 = 1825$ руб.;
 
 						Note:
 
@@ -598,7 +598,7 @@
 
 						**Дано**: 
 						$S = 1000000$ руб.;   
-						$i = 0,1$;  
+						$i = 0.1$;  
 						$k = 360$;  
 						$t = 180$ дней.  
 
@@ -618,7 +618,7 @@
 						$S = P(1+ni)$;    
 
 						$P = \tfrac{S}{1+ni} = \tfrac{S}{1+\tfrac{t}{k}\cdot i} = 
-						\tfrac{1000000}{1+\tfrac{180}{360}\cdot 0,1} = 952381$ руб.; 
+						\tfrac{1000000}{1+\tfrac{180}{360}\cdot 0.1} = 952381$ руб.; 
 
 						$D = S-P = 1000000-952381=47619$ руб.
 
@@ -650,7 +650,7 @@
 
 						**Дано**: 
 						$S = 1000000$ руб.;  
-						$i = 0,18$;   
+						$i = 0.18$;   
 						$k = 360$;  
 						$d_0 = 20$ января;  
 						$d_1 = 5$ октябрь.  
@@ -673,7 +673,7 @@
 						
 						$P = \tfrac{S}{1+ni}$;    
 
-						$P = \tfrac{1000000}{1+\tfrac{255}{360}\cdot 0,18} = 886917,96$ руб.
+						$P = \tfrac{1000000}{1+\tfrac{255}{360}\cdot 0.18} = 886917.96$ руб.
 
 						Note:
 
@@ -806,7 +806,7 @@
 						
 						$P=\tfrac{S}{(1+i)^n}$    
 
-						$P=\tfrac{30000}{(1+0.1)^{\tfrac{150}{360}}}=28831,97$ руб.
+						$P=\tfrac{30000}{(1+0.1)^{\tfrac{150}{360}}}=28831.97$ руб.
 
 						Note:
 
@@ -858,7 +858,7 @@
 						$n_1=\tfrac{t_1}{k_1}=\tfrac{108}{365}$;  
 
 						$P=\tfrac{S}{(1+i)^{n_1}}=
-						\tfrac{20000}{(1+0.12)^{\tfrac{108}{365}}}=19340,46$ ден. ед.
+						\tfrac{20000}{(1+0.12)^{\tfrac{108}{365}}}=19340.46$ ден. ед.
 
 						Note:
 
@@ -875,96 +875,26 @@
 						$n_2=\tfrac{t_2}{k_2}=\tfrac{106}{360}$;  
 
 						$P=\tfrac{S}{(1+i)^{n_2}}=
-						\tfrac{20000}{(1+0.12)^{\tfrac{106}{360}}}=19343,63$ ден. ед.
+						\tfrac{20000}{(1+0.12)^{\tfrac{106}{360}}}=19343.63$ ден. ед.
 
 						Note:
 
 
 					</script>
 				</section>
-
-				<section class="center" data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						### Исходный код программ 
-
-						``` 
-						//Название месяцев
-						let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль',
-						'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-						//Количество дней с января и до ноября включительно, первый элемент 0
-						let days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30];
-						let days2 = [];
-						let temp = 0;
-						for (let i in days) {
-							temp += days[i];
-							days2.push(temp);
-						}
-						//Запускаем функцию генерирующую таблицу
-						daysTable(months, days);
-			
-						function daysTable(months, days) {
-							let table = '<table><thead>';
-							//Заполняем 1 строчку
-							table += '<tr>';
-							for (let month of months) {
-								table += `<td>${month}</td>`;
-							}
-							table += '</tr><thead><tbody>';	
-							//Заполняем саму таблицу
-							//В месяце не больше 31 дней, поэтому используем генератор интервала от 0 до 31
-							for (let day of [...Array(31).keys()]) {
-							table += '<tr>';
-							//В каждом месяце по формуле записываем порядковый номер месяца
-							for (let month in months) {
-								let currentDay = 1 + day + days2[+month];
-								if (day+1 > days[+month+1]) {
-									table += `<td>-</td>`;
-								}
-								else {
-									table += `<td>${currentDay}</td>`;
-								}	
-							}
-							table += '</tr>';
-						}
-						table += '</tbody></table>';
-						document.querySelector('#table').innerHTML = table;			
-					
-						```
-
-						Note:
-					</script>
-				</section>
-
-				<section class="center" data-markdown  data-separator-notes="^Note:">
-					<script type="text/template">
-						Веселые картинки
-						----
-
-						Note:
-
-					</script>
-				</section> 
-
-				
-				<section
-				data-background-image="image/11.jpg"
-				data-menu-title="Финмат"
-				></section> 
-
-				<section
-				data-background-image="image/12.jpg"
-				data-menu-title="Калькулятор"
-				></section> 
-
-				<section
-				data-background-image="image/13.jpg"
-				data-menu-title="Учебник"
-				></section>
 
 				<section>
 					<h3>Таблица порядковые номера дней в обычном году</h3>
 					<!-- Сюда сгенерируем таблицу -->
 					<output id="table"></output>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						
+						## Игры
+						
+					</script>
 				</section>
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
@@ -1160,6 +1090,200 @@
 					</div>
 				</section>
 
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						
+						## Исходный код программ
+						
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						### Построение таблицы порядковых дней в обычном году
+
+						``` 
+						//Название месяцев
+						let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль',
+						'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+						//Количество дней с января и до ноября включительно, первый элемент 0
+						let days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30];
+						let days2 = [];
+						let temp = 0;
+						for (let i in days) {
+							temp += days[i];
+							days2.push(temp);
+						}
+						//Запускаем функцию генерирующую таблицу
+						daysTable(months, days);
+			
+						function daysTable(months, days) {
+							let table = '<table><thead>';
+							//Заполняем 1 строчку
+							table += '<tr>';
+							for (let month of months) {
+								table += `<td>${month}</td>`;
+							}
+							table += '</tr><thead><tbody>';	
+							//Заполняем саму таблицу
+							//В месяце не больше 31 дней, поэтому используем генератор интервала от 0 до 31
+							for (let day of [...Array(31).keys()]) {
+							table += '<tr>';
+							//В каждом месяце по формуле записываем порядковый номер месяца
+							for (let month in months) {
+								let currentDay = 1 + day + days2[+month];
+								if (day+1 > days[+month+1]) {
+									table += `<td>-</td>`;
+								}
+								else {
+									table += `<td>${currentDay}</td>`;
+								}	
+							}
+							table += '</tr>';
+						}
+						table += '</tbody></table>';
+						document.querySelector('#table').innerHTML = table;			
+					
+						```
+
+						Note:
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						#### Подсчет кредита по всем $3$ практикам на срок от $30$ дней до $10$ лет 
+						#### по простой и сложной процентной ставке
+
+						``` 
+						function Tabl1(){
+							function fun1() {
+								   let rng=document.getElementById('r1'); //rng - это ползунок
+								   let i1=document.getElementById('i1'); // i1 - input
+								   i1.value=rng.value;
+							   }
+							   
+						   
+							   //p - сумма первичная
+							   //i - процент
+							   //s - конечная сумма
+							   //I - доход
+							   //n - срок (t/k)
+							   let t = document.getElementById('r1');
+							   let i = document.getElementById('proch');
+							   let p = document.getElementById('summ');
+							   
+							function RasPr(){
+								if(t.value <= 0 || i.value  <= 0 || p.value  <= 0){
+									alert('Что-то не заполнено')
+								}else{
+								   //  Наращение--------------------------------------------------------
+								   let AnglNar = p.value * (1 + t.value/365 * i.value/100)
+								   let NemNar = p.value * (1 + t.value/360 * i.value/100)
+								   let HrasNar = p.value * (1 + t.value/360 * i.value/100)
+								   document.querySelector('#AN1').innerHTML = Math.ceil(AnglNar);
+								   document.querySelector('#NEM1').innerHTML = Math.ceil(NemNar);
+								   document.querySelector('#HR1').innerHTML = Math.ceil(HrasNar);
+								   // Дисконтирование---------------------------------------------------
+								   let AnglDis = AnglNar / (1 + t.value/365 * i.value/100);
+								   let NemDis = NemNar / (1 + t.value/360 * i.value/100);
+								   let HraslDis = HrasNar / (1 + t.value/360 * i.value/100);
+								   document.querySelector('#AN2').innerHTML = Math.ceil(AnglDis);
+								   document.querySelector('#NEM2').innerHTML = Math.ceil(NemDis);
+								   document.querySelector('#HR2').innerHTML = Math.ceil(HraslDis);
+								}
+						   
+							   }
+						   
+							   fun1()
+		   
+						   document.querySelector('#button1').onclick  = function(){
+							   RasPr()
+							   }
+					   }
+					   Tabl1()
+					   function Tabl2(){
+						   function fun1() {
+								   let rng=document.getElementById('r12'); //rng - это ползунок
+								   let i1=document.getElementById('i12'); // i1 - input
+								   i1.value=rng.value;
+							   }
+							   
+						   
+							   //p - сумма первичная
+							   //i - процент
+							   //s - конечная сумма
+							   //I - доход
+							   //n - срок (t/k)
+							   let t = document.getElementById('r12');
+							   let i = document.getElementById('proch2');
+							   let p = document.getElementById('summ2');
+						   
+							   
+							function disHard(){
+							   if(t.value <= 0 || i.value  <= 0 || p.value  <= 0){
+									alert('Что-то не заполнено')
+								}else{
+								   //Math.pow - (base, exponent)
+								   //base — число, которое возводится в степень (X)
+								   //exponent — степень, в которую нужно возвести (Y)
+		   
+								   //  Наращение--------------------------------------------------------
+								   let AnglNarHard = p.value * (Math.pow(1 + i.value/100, t.value/365))
+								   let NemNarHard = p.value * (Math.pow(1 + i.value/100, t.value/360))
+								   let HrasNarHard = p.value * (Math.pow(1 + i.value/100, t.value/360))
+								   document.querySelector('#ANHard1').innerHTML = Math.ceil(AnglNarHard);
+								   document.querySelector('#NEMHard1').innerHTML = Math.ceil(NemNarHard);
+								   document.querySelector('#HRHard1').innerHTML = Math.ceil(HrasNarHard);
+							   // Дисконтирование---------------------------------------------------
+								   let AnglDisHard = AnglNarHard / (Math.pow(1 + i.value/100, t.value/365));
+								   let NemDisHard = NemNarHard / (Math.pow(1 + i.value/100, t.value/360));
+								   let HraslDisHard = HrasNarHard / (Math.pow(1 + i.value/100, t.value/360));
+								   document.querySelector('#ANHard2').innerHTML = Math.ceil(AnglDisHard);
+									  document.querySelector('#NEMHard2').innerHTML = Math.ceil(NemDisHard);
+									  document.querySelector('#HRHard2').innerHTML = Math.ceil(HraslDisHard);
+								}
+							   }
+							   fun1()
+		   
+						   document.querySelector('#button2').onclick  = function(){
+							   disHard()
+							   }
+					   }
+					   Tabl2()
+					
+						```
+
+						Note:
+					</script>
+				</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						Веселые картинки
+						----
+
+						Note:
+
+					</script>
+				</section> 
+
+				
+				<section
+				data-background-image="image/11.jpg"
+				data-menu-title="Финмат"
+				></section> 
+
+				<section
+				data-background-image="image/12.jpg"
+				data-menu-title="Калькулятор"
+				></section> 
+
+				<section
+				data-background-image="image/13.jpg"
+				data-menu-title="Учебник"
+				></section>
+
 				<section class="center" data-markdown data-separator-notes="^Note:" data-menu-title="Заключительный слайд">
 					<script type="text/template">
 						Спасибо за внимание
@@ -1298,16 +1422,16 @@
 						 alert('Что-то не заполнено')
 					 }else{
 						//  Наращение--------------------------------------------------------
-						let AnglNar = p.value * (1 + t.value/365 * i.value)
-						let NemNar = p.value * (1 + t.value/360 * i.value)
-						let HrasNar = p.value * (1 + t.value/360 * i.value)
+						let AnglNar = p.value * (1 + t.value/365 * i.value/100)
+						let NemNar = p.value * (1 + t.value/360 * i.value/100)
+						let HrasNar = p.value * (1 + t.value/360 * i.value/100)
     					document.querySelector('#AN1').innerHTML = Math.ceil(AnglNar);
     					document.querySelector('#NEM1').innerHTML = Math.ceil(NemNar);
     					document.querySelector('#HR1').innerHTML = Math.ceil(HrasNar);
 						// Дисконтирование---------------------------------------------------
-						let AnglDis = AnglNar / (1 + t.value/365 * i.value);
-						let NemDis = NemNar / (1 + t.value/360 * i.value);
-						let HraslDis = HrasNar / (1 + t.value/360 * i.value);
+						let AnglDis = AnglNar / (1 + t.value/365 * i.value/100);
+						let NemDis = NemNar / (1 + t.value/360 * i.value/100);
+						let HraslDis = HrasNar / (1 + t.value/360 * i.value/100);
     					document.querySelector('#AN2').innerHTML = Math.ceil(AnglDis);
     					document.querySelector('#NEM2').innerHTML = Math.ceil(NemDis);
     					document.querySelector('#HR2').innerHTML = Math.ceil(HraslDis);
@@ -1349,16 +1473,16 @@
     					//exponent — степень, в которую нужно возвести (Y)
 
 						//  Наращение--------------------------------------------------------
-    					let AnglNarHard = p.value * (Math.pow(1 + i.value, t.value/365))
-    					let NemNarHard = p.value * (Math.pow(1 + i.value, t.value/360))
-    					let HrasNarHard = p.value * (Math.pow(1 + i.value, t.value/360))
+    					let AnglNarHard = p.value * (Math.pow(1 + i.value/100, t.value/365))
+    					let NemNarHard = p.value * (Math.pow(1 + i.value/100, t.value/360))
+    					let HrasNarHard = p.value * (Math.pow(1 + i.value/100, t.value/360))
     					document.querySelector('#ANHard1').innerHTML = Math.ceil(AnglNarHard);
 						document.querySelector('#NEMHard1').innerHTML = Math.ceil(NemNarHard);
     					document.querySelector('#HRHard1').innerHTML = Math.ceil(HrasNarHard);
 					// Дисконтирование---------------------------------------------------
-						let AnglDisHard = AnglNarHard / (Math.pow(1 + i.value, t.value/365));
-    					let NemDisHard = NemNarHard / (Math.pow(1 + i.value, t.value/360));
-    					let HraslDisHard = HrasNarHard / (Math.pow(1 + i.value, t.value/360));
+						let AnglDisHard = AnglNarHard / (Math.pow(1 + i.value/100, t.value/365));
+    					let NemDisHard = NemNarHard / (Math.pow(1 + i.value/100, t.value/360));
+    					let HraslDisHard = HrasNarHard / (Math.pow(1 + i.value/100, t.value/360));
     					document.querySelector('#ANHard2').innerHTML = Math.ceil(AnglDisHard);
    						document.querySelector('#NEMHard2').innerHTML = Math.ceil(NemDisHard);
    						document.querySelector('#HRHard2').innerHTML = Math.ceil(HraslDisHard);
